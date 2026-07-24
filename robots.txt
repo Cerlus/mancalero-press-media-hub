@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://press.archius.dev/sitemap.xml
+Sitemap: https://cerlus.github.io/mancalero-press-media-hub/sitemap.xml

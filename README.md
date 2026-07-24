@@ -8,17 +8,17 @@ Public-facing companion to the Mancalero Launch Command Center. The visual langu
 2. Upload this folder to the repository's `main` branch.
 3. In GitHub, open **Settings > Pages** and choose **GitHub Actions** as the source.
 4. The included workflow deploys the site on every push to `main`.
-5. Keep the `CNAME` file in the repository root. It is currently set to `press.archius.dev`.
+5. Your free public URL is `https://cerlus.github.io/mancalero-press-media-hub/`.
 
 ## Custom domain
 
-At the DNS provider for `archius.dev`, add this record:
+The custom domain is optional and requires owning a domain. If you later purchase `archius.dev`, add this record at its DNS provider:
 
 | Type | Host | Target |
 | --- | --- | --- |
 | CNAME | `press` | `<github-username>.github.io` |
 
-Then add `press.archius.dev` under **Settings > Pages > Custom domain**. GitHub will issue HTTPS after DNS resolves. If `media.archius.dev` is preferred, change the `CNAME`, sitemap, robots file, and the domain in this README before publishing.
+Then add `press.archius.dev` under **Settings > Pages > Custom domain**. GitHub will issue HTTPS after DNS resolves. Until then, use the free GitHub Pages URL above.
 
 ## Add the missing media
 
