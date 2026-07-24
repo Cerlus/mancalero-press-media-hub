@@ -1,0 +1,37 @@
+# Mancalero Press & Media Hub
+
+Public-facing companion to the Mancalero Launch Command Center. The visual language follows the existing private dashboard: warm paper, navy ink, serif display type, compact uppercase labels, colored edge accents, and a marble rail motif.
+
+## GitHub Pages setup
+
+1. Create a GitHub repository, suggested name: `mancalero-press-media-hub`.
+2. Upload this folder to the repository's `main` branch.
+3. In GitHub, open **Settings > Pages** and choose **GitHub Actions** as the source.
+4. The included workflow deploys the site on every push to `main`.
+5. Keep the `CNAME` file in the repository root. It is currently set to `press.archius.dev`.
+
+## Custom domain
+
+At the DNS provider for `archius.dev`, add this record:
+
+| Type | Host | Target |
+| --- | --- | --- |
+| CNAME | `press` | `<github-username>.github.io` |
+
+Then add `press.archius.dev` under **Settings > Pages > Custom domain**. GitHub will issue HTTPS after DNS resolves. If `media.archius.dev` is preferred, change the `CNAME`, sitemap, robots file, and the domain in this README before publishing.
+
+## Add the missing media
+
+- `assets/screenshots/`: final screenshots
+- `assets/gifs/`: short gameplay GIFs
+- `assets/logos/`: logo files and transparent marks
+- `assets/trailers/`: local trailer and B-roll files
+- `assets/press-kit/`: downloadable ZIP and fact sheet
+- `assets/downloads/`: creator-friendly B-roll ZIP
+- `assets/branding/`: key art, capsule art, and branding guide
+
+The supplied capsule art, logos, screenshots, GIFs, and gameplay clips are already included. Add the final YouTube trailer URL when it is available. The public press contact is `needle-blares.0m@icloud.com`.
+
+## Relationship to the Command Center
+
+The Launch Command Center remains the private operational dashboard. This site is the public source for press, creators, showcases, festivals, and other external contacts. The footer links back to the dashboard without exposing private planning content.
