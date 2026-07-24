@@ -30,7 +30,7 @@ Then add `press.archius.dev` under **Settings > Pages > Custom domain**. GitHub 
 - `assets/downloads/`: creator-friendly B-roll ZIP
 - `assets/branding/`: key art, capsule art, and branding guide
 
-The supplied capsule art, logos, screenshots, GIFs, and gameplay clips are already included. Add the final YouTube trailer URL when it is available. The public press contact is `needle-blares.0m@icloud.com`.
+The supplied capsule art, logos, screenshots, GIFs, gameplay clips, and official YouTube demo trailer are already included. The public press contact is `needle-blares.0m@icloud.com`.
 
 ## Relationship to the Command Center
 
