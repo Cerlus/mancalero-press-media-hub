@@ -6,7 +6,6 @@
   <meta name="description" content="Press, creator, showcase, and media resources for Mancalero by ArchiusDev.">
   <meta name="theme-color" content="#f3ecdc">
   <title>Mancalero / Press & Media</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -35,10 +34,8 @@
         </div>
         <p class="status-line"><span class="status-dot"></span> Playtest: live now &nbsp;·&nbsp; Demo: September 15, 2026 &nbsp;·&nbsp; Release: November 5, 2026</p>
       </div>
-      <figure class="hero-art hero-art-three">
+      <figure class="hero-art">
         <img src="assets/branding/4k-mancalero.png" alt="Mancalero capsule artwork with colourful marbles swirling around the title">
-        <canvas id="hero-marble-stage" class="three-stage" aria-hidden="true"></canvas>
-        <div class="hero-art-glint" aria-hidden="true"></div>
         <figcaption class="art-caption">OFFICIAL CAPSULE ART / 4K</figcaption>
       </figure>
     </section>
@@ -53,15 +50,38 @@
     <section class="play-lab shell" id="play">
       <div class="play-lab-copy">
         <p class="section-index">01 / PLAY A ROUND</p>
-        <h2>Try the table before you read the table.</h2>
-        <p>One small browser experiment: regular marbles, one table, and Sprout across the board. Choose a pit, sow the line, and see how a familiar move becomes a score engine.</p>
-        <div class="play-lab-notes"><span><i class="mini-dot blue"></i>You move first</span><span><i class="mini-dot green"></i>Sprout answers</span><span><i class="mini-dot gold"></i>Restart for another line</span></div>
+        <h2>Play one round against Sprout.</h2>
+        <p>Mancalero stripped to its ancient foundation: regular marbles, six pits, two stores, captures, extra turns, and a score to chase.</p>
+        <div class="play-lab-notes"><span><i class="mini-dot blue"></i>Sow your blue row</span><span><i class="mini-dot red"></i>Read Sprout’s response</span><span><i class="mini-dot gold"></i>Fill your store and score</span></div>
       </div>
       <div class="mini-game-shell" data-mancalero-mini>
-        <div class="mini-game-topline"><span>Browser table / regular marbles only</span><strong id="mini-game-status" aria-live="polite">Choose a blue pit to sow.</strong></div>
-        <div class="mini-game-stage"><canvas id="mancalero-board" aria-label="Interactive Mancalero board: click one of your blue pits to sow marbles against Sprout"></canvas><span class="mini-team-label mini-team-sprout">SPROUT</span><span class="mini-team-label mini-team-player">YOU</span><div class="mini-game-vignette" aria-hidden="true"></div></div>
-        <div class="mini-game-controls" id="mini-game-controls"><span class="mini-score">Score <strong id="mini-game-score">0</strong></span><span class="mini-turn">Turn <strong id="mini-game-turn">1</strong>/8</span><button type="button" data-game-action="restart">Restart round</button></div>
-        <p class="mini-game-help">Click any blue pit with marbles. This is a tiny playable round—no shop, no victory screen, just the board and a restart button.</p>
+        <div class="mini-toolbar">
+          <div class="turn-badge"><span>TURN</span><strong id="mini-turn-state">YOUR TURN</strong></div>
+          <div><span>STONE</span><strong>REGULAR</strong></div>
+          <div><span>TABLE</span><strong>1 / 1</strong></div>
+          <div><span>ROUND</span><strong><b id="mini-game-turn">1</b> / 8</strong></div>
+          <button type="button" class="mini-sound" data-game-action="sound" aria-pressed="true">SFX ON</button>
+        </div>
+        <div class="mini-opponent-card">
+          <div class="sprout-portrait" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="opponent-copy"><strong>Sprout</strong><em>“A novice gardener.”</em></div>
+          <div class="target-track"><span>SCORE NEEDED TO BEAT</span><div><i id="mini-score-progress"></i><b><span id="mini-game-score">0</span> / 120</b></div></div>
+        </div>
+        <div class="mancala-board" id="mini-board">
+          <div class="mini-store sprout-store"><span>OPP</span><div class="marble-pile" data-store-marbles="sprout"></div><strong data-store-count="sprout">0</strong></div>
+          <div class="mini-lanes">
+            <div class="mini-pit-row" id="sprout-pits" aria-label="Sprout pits"></div>
+            <div class="mini-pit-row" id="player-pits" aria-label="Your pits"></div>
+          </div>
+          <div class="mini-store player-store"><span>YOU</span><div class="marble-pile cool-pile" data-store-marbles="player"></div><strong data-store-count="player">0</strong></div>
+        </div>
+        <div class="mini-bottom-hud">
+          <div class="points-panel"><span>POINTS</span><strong id="mini-points">0</strong></div>
+          <div><span>YOUR STORE</span><strong id="mini-player-store">0</strong></div>
+          <div><span>SPROUT STORE</span><strong id="mini-sprout-store">0</strong></div>
+          <p id="mini-game-status" aria-live="polite">Choose one of your blue pits to sow.</p>
+          <button type="button" data-game-action="restart">Restart table</button>
+        </div>
       </div>
     </section>
 
