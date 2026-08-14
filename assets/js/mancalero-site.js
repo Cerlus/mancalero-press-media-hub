@@ -134,13 +134,13 @@ if (root instanceof HTMLElement) {
       return [
         ...Array.from({ length: 6 }, (_, index) => ({ side: "player", index })),
         { side: "player", store: true },
-        ...Array.from({ length: 6 }, (_, offset) => ({ side: "sprout", index: 5 - offset })),
+        ...Array.from({ length: 6 }, (_, index) => ({ side: "sprout", index })),
       ];
     }
 
     function sproutRing() {
       return [
-        ...Array.from({ length: 6 }, (_, offset) => ({ side: "sprout", index: 5 - offset })),
+        ...Array.from({ length: 6 }, (_, index) => ({ side: "sprout", index })),
         { side: "sprout", store: true },
         ...Array.from({ length: 6 }, (_, index) => ({ side: "player", index })),
       ];
