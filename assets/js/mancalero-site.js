@@ -1,322 +1,256 @@
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+const root = document.querySelector("[data-mancalero-mini]");
 
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-function configureRenderer(canvas, alpha = true) {
-  const renderer = new THREE.WebGLRenderer({
-    canvas,
-    alpha,
-    antialias: true,
-    powerPreference: "high-performance",
-  });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.8));
-  renderer.outputColorSpace = THREE.SRGBColorSpace;
-  return renderer;
-}
-
-function initHeroScene() {
-  const canvas = document.querySelector("#hero-marble-stage");
-  if (!(canvas instanceof HTMLCanvasElement)) return;
-
-  const renderer = configureRenderer(canvas);
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
-  camera.position.set(0, 0, 10);
-
-  scene.add(new THREE.HemisphereLight(0xfff4d5, 0x101b3d, 2.3));
-  const key = new THREE.DirectionalLight(0xffffff, 3.2);
-  key.position.set(-4, 5, 8);
-  scene.add(key);
-
-  const group = new THREE.Group();
-  scene.add(group);
-  const colours = [0x5bc0d0, 0xe2784f, 0xd9b65a, 0x9368d6, 0xf8efcf, 0x38a982, 0xe85870];
-  const marbles = [];
-  for (let i = 0; i < 12; i += 1) {
-    const material = new THREE.MeshPhysicalMaterial({
-      color: colours[i % colours.length],
-      roughness: 0.2,
-      metalness: 0.08,
-      clearcoat: 0.8,
-      clearcoatRoughness: 0.15,
-    });
-    const marble = new THREE.Mesh(new THREE.SphereGeometry(0.22 + (i % 3) * 0.025, 24, 16), material);
-    const angle = (i / 12) * Math.PI * 2;
-    marble.position.set(Math.cos(angle) * (2.1 + (i % 2) * 0.3), Math.sin(angle) * 1.35, 1.1 + (i % 3) * 0.14);
-    marble.userData = { angle, radius: 2.1 + (i % 2) * 0.3, phase: i * 0.65 };
-    group.add(marble);
-    marbles.push(marble);
-  }
-
-  const ring = new THREE.Mesh(
-    new THREE.TorusGeometry(2.35, 0.025, 8, 96),
-    new THREE.MeshBasicMaterial({ color: 0xf4dca6, transparent: true, opacity: 0.45 }),
-  );
-  ring.rotation.x = Math.PI * 0.5;
-  ring.position.z = 0.55;
-  group.add(ring);
-
-  function resize() {
-    const rect = canvas.getBoundingClientRect();
-    const width = Math.max(1, rect.width);
-    const height = Math.max(1, rect.height);
-    renderer.setSize(width, height, false);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-  }
-
-  resize();
-  window.addEventListener("resize", resize, { passive: true });
-  let frame = 0;
-  function animate(time = 0) {
-    frame = window.requestAnimationFrame(animate);
-    const seconds = time * 0.001;
-    group.rotation.z = Math.sin(seconds * 0.18) * 0.08;
-    group.rotation.y = Math.sin(seconds * 0.22) * 0.12;
-    marbles.forEach((marble) => {
-      const data = marble.userData;
-      marble.position.y += Math.sin(seconds * 1.2 + data.phase) * 0.0008;
-      marble.rotation.x += 0.004;
-      marble.rotation.y += 0.006;
-    });
-    renderer.render(scene, camera);
-    if (reducedMotion) {
-      window.cancelAnimationFrame(frame);
-      renderer.render(scene, camera);
-    }
-  }
-  animate();
-}
-
-function initMiniGame() {
-  const root = document.querySelector("[data-mancalero-mini]");
-  const canvas = document.querySelector("#mancalero-board");
-  if (!(root instanceof HTMLElement) || !(canvas instanceof HTMLCanvasElement)) return;
-
-  const renderer = configureRenderer(canvas, false);
-  renderer.setClearColor(0x101d3b, 1);
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(28, 1, 0.1, 100);
-  camera.position.set(0, 0, 15);
-  camera.lookAt(0, 0, 0);
-  scene.add(new THREE.HemisphereLight(0xfff7dd, 0x0e1832, 2.4));
-  const key = new THREE.DirectionalLight(0xffffff, 3.8);
-  key.position.set(-4, 5, 9);
-  scene.add(key);
-
-  const board = new THREE.Mesh(
-    new THREE.BoxGeometry(13.4, 6.6, 0.42),
-    new THREE.MeshStandardMaterial({ color: 0x273960, roughness: 0.72, metalness: 0.06 }),
-  );
-  board.position.z = -0.45;
-  scene.add(board);
-  const boardEdge = new THREE.Mesh(
-    new THREE.BoxGeometry(13.55, 6.75, 0.12),
-    new THREE.MeshBasicMaterial({ color: 0xe0b868, transparent: true, opacity: 0.72 }),
-  );
-  boardEdge.position.z = -0.69;
-  scene.add(boardEdge);
-
-  const playerPositions = Array.from({ length: 6 }, (_, i) => new THREE.Vector3(-4.65 + i * 1.86, -1.45, 0.05));
-  const sproutPositions = Array.from({ length: 6 }, (_, i) => new THREE.Vector3(-4.65 + i * 1.86, 1.45, 0.05));
-  const pitMeshes = [];
-  const pitMaterials = {
-    player: new THREE.MeshStandardMaterial({ color: 0x2fa7bb, roughness: 0.35, metalness: 0.12 }),
-    sprout: new THREE.MeshStandardMaterial({ color: 0x65b98c, roughness: 0.35, metalness: 0.12 }),
-  };
-  const playerRing = new THREE.MeshBasicMaterial({ color: 0x7be1ec, transparent: true, opacity: 0.65 });
-  const sproutRing = new THREE.MeshBasicMaterial({ color: 0xb4e6a4, transparent: true, opacity: 0.55 });
-
-  function addPit(position, side, index) {
-    const group = new THREE.Group();
-    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.76, 0.76, 0.22, 32), pitMaterials[side]);
-    body.rotation.x = Math.PI * 0.5;
-    group.add(body);
-    const ring = new THREE.Mesh(new THREE.TorusGeometry(0.77, 0.035, 8, 32), side === "player" ? playerRing : sproutRing);
-    ring.rotation.x = Math.PI * 0.5;
-    ring.position.z = 0.13;
-    group.add(ring);
-    group.position.copy(position);
-    group.userData = { side, index, body, ring };
-    scene.add(group);
-    pitMeshes.push(group);
-  }
-  playerPositions.forEach((position, index) => addPit(position, "player", index));
-  sproutPositions.forEach((position, index) => addPit(position, "sprout", index));
-
-  const marbleGroup = new THREE.Group();
-  scene.add(marbleGroup);
-  const marbleMaterials = {
-    player: new THREE.MeshPhysicalMaterial({ color: 0x49c2e0, roughness: 0.18, metalness: 0.08, clearcoat: 0.8 }),
-    sprout: new THREE.MeshPhysicalMaterial({ color: 0x78c98f, roughness: 0.2, metalness: 0.08, clearcoat: 0.8 }),
-  };
-  const offsets = [[-0.23, 0.18], [0.23, 0.18], [-0.23, -0.18], [0.23, -0.18], [0, 0.38], [0, -0.38], [-0.42, 0], [0.42, 0]];
-  const pulseMeshes = [];
-  const state = { player: [4, 4, 4, 4, 4, 4], sprout: [4, 4, 4, 4, 4, 4], score: 0, turn: 1, busy: false, ended: false };
-  const path = [
-    ...playerPositions.map((_, index) => ({ side: "player", index })),
-    ...sproutPositions.map((_, index) => ({ side: "sprout", index: 5 - index })),
-  ];
-
-  const statusEl = root.querySelector("#mini-game-status");
-  const scoreEl = root.querySelector("#mini-game-score");
-  const turnEl = root.querySelector("#mini-game-turn");
-  const controls = root.querySelector("#mini-game-controls");
+if (root instanceof HTMLElement) {
+  const STARTING_PITS = [4, 4, 4, 4, 4, 4];
+  const TARGET_SCORE = 120;
+  const TURN_LIMIT = 8;
+  const NOTE_FREQUENCIES = [523.25, 587.33, 659.25, 698.46, 783.99, 880, 987.77, 1046.5, 1174.66, 1318.51, 1396.91, 1567.98];
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const playerPitsElement = root.querySelector("#player-pits");
+  const sproutPitsElement = root.querySelector("#sprout-pits");
+  const statusElement = root.querySelector("#mini-game-status");
+  const pointsElement = root.querySelector("#mini-points");
+  const scoreElement = root.querySelector("#mini-game-score");
+  const progressElement = root.querySelector("#mini-score-progress");
+  const turnElement = root.querySelector("#mini-game-turn");
+  const turnStateElement = root.querySelector("#mini-turn-state");
+  const playerStoreElement = root.querySelector("#mini-player-store");
+  const sproutStoreElement = root.querySelector("#mini-sprout-store");
   const restartButton = root.querySelector('[data-game-action="restart"]');
-  if (!(statusEl instanceof HTMLElement) || !(scoreEl instanceof HTMLElement) || !(turnEl instanceof HTMLElement) || !(controls instanceof HTMLElement) || !(restartButton instanceof HTMLButtonElement)) return;
+  const soundButton = root.querySelector('[data-game-action="sound"]');
 
-  function setStatus(text) {
-    statusEl.textContent = text;
-  }
+  const ready = [playerPitsElement, sproutPitsElement, statusElement, pointsElement, scoreElement, progressElement, turnElement, turnStateElement, playerStoreElement, sproutStoreElement, restartButton, soundButton].every(Boolean);
 
-  function updateHud() {
-    scoreEl.textContent = String(state.score);
-    turnEl.textContent = String(Math.min(state.turn, 8));
-    controls.querySelectorAll("button[data-pit]").forEach((button) => {
-      const index = Number(button.dataset.pit);
-      const available = !state.busy && !state.ended && state.player[index] > 0;
-      button.disabled = !available;
-      button.textContent = `Pit ${index + 1} · ${state.player[index]}`;
-    });
-  }
+  if (ready) {
+    let state = createState();
+    let soundOn = true;
+    let audioContext = null;
 
-  function pulse(position) {
-    const mesh = new THREE.Mesh(new THREE.SphereGeometry(0.09, 12, 8), new THREE.MeshBasicMaterial({ color: 0xffe29a, transparent: true, opacity: 0.9 }));
-    mesh.position.copy(position);
-    mesh.position.z = 0.6;
-    scene.add(mesh);
-    pulseMeshes.push({ mesh, age: 0 });
-  }
+    function createState() {
+      return {
+        player: [...STARTING_PITS],
+        sprout: [...STARTING_PITS],
+        playerStore: 0,
+        sproutStore: 0,
+        score: 0,
+        turn: 1,
+        busy: false,
+        ended: false,
+      };
+    }
 
-  function renderBoard() {
-    while (marbleGroup.children.length) marbleGroup.remove(marbleGroup.children[0]);
-    const renderSide = (values, positions, side) => values.forEach((count, pitIndex) => {
-      const position = positions[pitIndex];
-      for (let i = 0; i < count; i += 1) {
-        const offset = offsets[i % offsets.length];
-        const marble = new THREE.Mesh(new THREE.SphereGeometry(0.16, 18, 12), marbleMaterials[side]);
-        marble.position.set(position.x + offset[0], position.y + offset[1], 0.36 + (i % 2) * 0.02);
-        marbleGroup.add(marble);
+    function ensureAudio() {
+      if (!soundOn) return null;
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) return null;
+      if (!audioContext) audioContext = new AudioContextClass();
+      if (audioContext.state === "suspended") audioContext.resume();
+      return audioContext;
+    }
+
+    function playTone(frequency, duration = 0.07, volume = 0.055, type = "square") {
+      const audio = ensureAudio();
+      if (!audio) return;
+      const now = audio.currentTime;
+      const oscillator = audio.createOscillator();
+      const gain = audio.createGain();
+      oscillator.type = type;
+      oscillator.frequency.setValueAtTime(frequency, now);
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.exponentialRampToValueAtTime(volume, now + 0.008);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+      oscillator.connect(gain).connect(audio.destination);
+      oscillator.start(now);
+      oscillator.stop(now + duration + 0.015);
+    }
+
+    function playCapture() {
+      [659.25, 783.99, 1046.5].forEach((frequency, index) => {
+        window.setTimeout(() => playTone(frequency, 0.14, 0.05, "triangle"), index * 55);
+      });
+    }
+
+    const wait = (milliseconds) => new Promise((resolve) => window.setTimeout(resolve, reducedMotion ? 0 : milliseconds));
+
+    function fillMarbles(container, count, cool = false) {
+      container.textContent = "";
+      container.classList.toggle("cool-pile", cool);
+      const shown = Math.min(count, 8);
+      for (let index = 0; index < shown; index += 1) container.append(document.createElement("i"));
+      if (count > shown) {
+        const remainder = document.createElement("b");
+        remainder.textContent = `+${count - shown}`;
+        container.append(remainder);
       }
-    });
-    renderSide(state.player, playerPositions, "player");
-    renderSide(state.sprout, sproutPositions, "sprout");
-    updateHud();
-  }
-
-  function addPitButtons() {
-    controls.querySelectorAll("button[data-pit]").forEach((button) => button.remove());
-    const anchor = restartButton;
-    for (let i = 0; i < 6; i += 1) {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.dataset.pit = String(i);
-      button.addEventListener("click", () => playerMove(i));
-      controls.insertBefore(button, anchor);
     }
-  }
 
-  function finishRound() {
-    state.ended = true;
-    state.busy = false;
-    setStatus("Round complete — restart when you want another line.");
-    updateHud();
-  }
-
-  const wait = (ms) => new Promise((resolve) => window.setTimeout(resolve, reducedMotion ? 0 : ms));
-
-  async function distribute(side, index) {
-    const values = state[side];
-    const start = side === "player" ? index : 11 - index;
-    const count = values[index];
-    values[index] = 0;
-    renderBoard();
-    for (let step = 0; step < count; step += 1) {
-      const target = path[(start + step) % path.length];
-      state[target.side][target.index] += 1;
-      if (side === "player") state.score += target.side === "player" ? 4 : 2;
-      pulse(target.side === "player" ? playerPositions[target.index] : sproutPositions[target.index]);
-      renderBoard();
-      await wait(95);
-    }
-  }
-
-  async function playerMove(index) {
-    if (state.busy || state.ended || state.player[index] < 1) return;
-    state.busy = true;
-    setStatus(`You sowed Pit ${index + 1}. Watch the line.`);
-    updateHud();
-    await distribute("player", index);
-    if (state.turn >= 8 || state.player.every((value) => value === 0) || state.sprout.every((value) => value === 0)) {
-      finishRound();
-      return;
-    }
-    await wait(360);
-    const sproutIndex = state.sprout.reduce((best, value, candidate) => value > state.sprout[best] ? candidate : best, 0);
-    setStatus("Sprout is sowing.");
-    await distribute("sprout", sproutIndex);
-    state.turn += 1;
-    state.busy = false;
-    if (state.turn > 8 || state.player.every((value) => value === 0) || state.sprout.every((value) => value === 0)) finishRound();
-    else setStatus("Choose another blue pit to sow.");
-    updateHud();
-  }
-
-  function restart() {
-    state.player = [4, 4, 4, 4, 4, 4];
-    state.sprout = [4, 4, 4, 4, 4, 4];
-    state.score = 0;
-    state.turn = 1;
-    state.busy = false;
-    state.ended = false;
-    setStatus("Choose a blue pit to sow.");
-    renderBoard();
-  }
-
-  restartButton.addEventListener("click", restart);
-  canvas.addEventListener("pointerdown", (event) => {
-    if (state.busy || state.ended) return;
-    const rect = canvas.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 13.2;
-    const y = (0.5 - (event.clientY - rect.top) / rect.height) * 6.5;
-    const index = playerPositions.reduce((best, position, candidate) => Math.abs(position.x - x) < Math.abs(playerPositions[best].x - x) ? candidate : best, 0);
-    if (Math.abs(playerPositions[index].x - x) < 0.9 && Math.abs(playerPositions[index].y - y) < 1.1) playerMove(index);
-  });
-
-  function resize() {
-    const rect = canvas.getBoundingClientRect();
-    const width = Math.max(1, rect.width);
-    const height = Math.max(1, rect.height);
-    renderer.setSize(width, height, false);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-  }
-  resize();
-  window.addEventListener("resize", resize, { passive: true });
-  addPitButtons();
-  restart();
-
-  let last = performance.now();
-  function animate(now) {
-    window.requestAnimationFrame(animate);
-    const delta = Math.min(0.05, (now - last) / 1000);
-    last = now;
-    pulseMeshes.splice(0).forEach(({ mesh, age }) => {
-      const nextAge = age + delta;
-      mesh.scale.setScalar(1 + nextAge * 3);
-      mesh.material.opacity = Math.max(0, 0.9 - nextAge * 2.4);
-      if (nextAge < 0.55) pulseMeshes.push({ mesh, age: nextAge });
-      else {
-        scene.remove(mesh);
-        mesh.geometry.dispose();
-        mesh.material.dispose();
+    function buildPit(side, index, count, interactive) {
+      const pit = document.createElement(interactive ? "button" : "div");
+      pit.className = `mini-pit ${side === "player" ? "player-pit" : "opponent-pit"}`;
+      if (pit instanceof HTMLButtonElement) {
+        pit.type = "button";
+        pit.disabled = state.busy || state.ended || count === 0;
+        pit.setAttribute("aria-label", `Sow your pit ${index + 1}, containing ${count} marbles`);
+        pit.addEventListener("click", () => playerMove(index));
       }
+      const pile = document.createElement("span");
+      pile.className = "marble-pile";
+      fillMarbles(pile, count, side === "player");
+      const amount = document.createElement("strong");
+      amount.textContent = String(count);
+      pit.append(pile, amount);
+      if (interactive) {
+        const label = document.createElement("small");
+        label.textContent = `PIT ${index + 1}`;
+        pit.append(label);
+      }
+      return pit;
+    }
+
+    function render() {
+      playerPitsElement.textContent = "";
+      state.player.forEach((count, index) => playerPitsElement.append(buildPit("player", index, count, true)));
+      sproutPitsElement.textContent = "";
+      [5, 4, 3, 2, 1, 0].forEach((index) => sproutPitsElement.append(buildPit("sprout", index, state.sprout[index], false)));
+      pointsElement.textContent = String(state.score);
+      scoreElement.textContent = String(state.score);
+      progressElement.style.width = `${Math.min(100, Math.round((state.score / TARGET_SCORE) * 100))}%`;
+      turnElement.textContent = String(Math.min(state.turn, TURN_LIMIT));
+      turnStateElement.textContent = state.busy ? "IN MOTION" : state.ended ? "TABLE END" : "YOUR TURN";
+      playerStoreElement.textContent = String(state.playerStore);
+      sproutStoreElement.textContent = String(state.sproutStore);
+      root.querySelectorAll('[data-store-count="player"]').forEach((element) => { element.textContent = String(state.playerStore); });
+      root.querySelectorAll('[data-store-count="sprout"]').forEach((element) => { element.textContent = String(state.sproutStore); });
+      root.querySelectorAll('[data-store-marbles="player"]').forEach((element) => fillMarbles(element, state.playerStore, true));
+      root.querySelectorAll('[data-store-marbles="sprout"]').forEach((element) => fillMarbles(element, state.sproutStore, false));
+    }
+
+    function setStatus(message) {
+      statusElement.textContent = message;
+      render();
+    }
+
+    function playerRing() {
+      return [
+        ...Array.from({ length: 6 }, (_, index) => ({ side: "player", index })),
+        { side: "player", store: true },
+        ...Array.from({ length: 6 }, (_, offset) => ({ side: "sprout", index: 5 - offset })),
+      ];
+    }
+
+    function sproutRing() {
+      return [
+        ...Array.from({ length: 6 }, (_, offset) => ({ side: "sprout", index: 5 - offset })),
+        { side: "sprout", store: true },
+        ...Array.from({ length: 6 }, (_, index) => ({ side: "player", index })),
+      ];
+    }
+
+    async function sow(side, pitIndex) {
+      const ring = side === "player" ? playerRing() : sproutRing();
+      const values = state[side];
+      const marbleCount = values[pitIndex];
+      const start = ring.findIndex((slot) => slot.side === side && slot.index === pitIndex && !slot.store);
+      values[pitIndex] = 0;
+      render();
+      let lastSlot = ring[start];
+
+      for (let step = 0; step < marbleCount; step += 1) {
+        const slot = ring[(start + step + 1) % ring.length];
+        lastSlot = slot;
+        if (slot.store) {
+          if (slot.side === "player") state.playerStore += 1;
+          else state.sproutStore += 1;
+        } else {
+          state[slot.side][slot.index] += 1;
+        }
+        if (side === "player") state.score += slot.side === "player" ? 4 : 2;
+        playTone(NOTE_FREQUENCIES[step % NOTE_FREQUENCIES.length]);
+        render();
+        await wait(105);
+      }
+
+      if (!lastSlot.store && lastSlot.side === side) {
+        const ownPit = state[side][lastSlot.index];
+        const oppositeIndex = 5 - lastSlot.index;
+        const oppositeSide = side === "player" ? "sprout" : "player";
+        const captured = state[oppositeSide][oppositeIndex];
+        if (ownPit === 1 && captured > 0) {
+          state[side][lastSlot.index] = 0;
+          state[oppositeSide][oppositeIndex] = 0;
+          if (side === "player") {
+            state.playerStore += captured + 1;
+            state.score += (captured + 1) * 10;
+          } else {
+            state.sproutStore += captured + 1;
+          }
+          playCapture();
+          setStatus(side === "player" ? `Captured ${captured + 1} marbles — score engine online.` : `Sprout captured ${captured + 1} marbles.`);
+          await wait(380);
+        }
+      }
+      return Boolean(lastSlot.store && lastSlot.side === side);
+    }
+
+    function collectRemaining() {
+      const playerLeft = state.player.reduce((sum, value) => sum + value, 0);
+      const sproutLeft = state.sprout.reduce((sum, value) => sum + value, 0);
+      state.playerStore += playerLeft;
+      state.sproutStore += sproutLeft;
+      state.score += playerLeft * 6;
+      state.player.fill(0);
+      state.sprout.fill(0);
+    }
+
+    function finishRound(message = "Table complete — restart whenever you want another line.") {
+      state.ended = true;
+      state.busy = false;
+      playTone(1046.5, 0.22, 0.065, "triangle");
+      setStatus(message);
+    }
+
+    async function playerMove(index) {
+      if (state.busy || state.ended || state.player[index] < 1) return;
+      ensureAudio();
+      state.busy = true;
+      setStatus(`Sowing Pit ${index + 1}…`);
+      const extraTurn = await sow("player", index);
+      if (state.player.every((value) => value === 0) || state.sprout.every((value) => value === 0)) {
+        collectRemaining();
+        finishRound();
+        return;
+      }
+      if (extraTurn) {
+        state.busy = false;
+        setStatus("Extra turn — choose another blue pit.");
+        return;
+      }
+      await wait(420);
+      const sproutIndex = state.sprout.reduce((best, value, candidate) => value > state.sprout[best] ? candidate : best, 0);
+      setStatus(`Sprout is sowing Pit ${sproutIndex + 1}…`);
+      await sow("sprout", sproutIndex);
+      state.turn += 1;
+      if (state.turn > TURN_LIMIT || state.player.every((value) => value === 0) || state.sprout.every((value) => value === 0)) {
+        if (state.player.every((value) => value === 0) || state.sprout.every((value) => value === 0)) collectRemaining();
+        finishRound();
+        return;
+      }
+      state.busy = false;
+      setStatus("Your turn — choose another blue pit.");
+    }
+
+    function restart() {
+      state = createState();
+      setStatus("Choose one of your blue pits to sow.");
+    }
+
+    restartButton.addEventListener("click", restart);
+    soundButton.addEventListener("click", () => {
+      soundOn = !soundOn;
+      soundButton.textContent = soundOn ? "SFX ON" : "SFX OFF";
+      soundButton.setAttribute("aria-pressed", String(soundOn));
+      if (soundOn) playTone(783.99, 0.09, 0.045, "triangle");
     });
-    if (!reducedMotion) marbleGroup.rotation.z = Math.sin(now * 0.0004) * 0.003;
-    renderer.render(scene, camera);
+    render();
   }
-  animate(performance.now());
 }
-
-initHeroScene();
-initMiniGame();
