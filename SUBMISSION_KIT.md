@@ -6,12 +6,16 @@
 - Developer: ArchiusDev
 - Developer profile: Ghanaian-Canadian solo indie developer
 - Genre: Roguelike deckbuilder, strategy, board game
-- Platform: Windows PC via Steam
-- Playtest: Early August 2026
-- Public demo: September 2026
-- Full release target: November 2026
+- Platform: Windows, macOS, and Linux via Steam
+- Playtest: Live now; no key required
+- Public demo: September 15, 2026
+- Full release target: November 5, 2026 (tentative)
+- Price target: $12.99 USD; 10% launch sale planned
 - Steam: https://store.steampowered.com/app/4811700/Mancalero/
 - OST: https://youtu.be/9H9Xf3YLuuQ?si=cAwMLArpoiDHiaRB
+- Discord: https://discord.gg/aWSUUYeFTD
+- Bilibili: https://space.bilibili.com/3707052637554989
+- TikTok: https://www.tiktok.com/@archiusgamedev
 - Press contact: needle-blares.0m@icloud.com
 
 ## Short pitches
@@ -52,7 +56,7 @@ The core distinction is the combination of tactile Mancala sowing, marble build-
 
 ### What is the release plan?
 
-The current roadmap is an early-August playtest, a public demo in September, and a full release in November 2026.
+The public Steam Playtest is live now. The current roadmap is a September 15 public demo and a tentative November 5, 2026 full release.
 
 ### Who is it for?
 

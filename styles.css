@@ -9,3 +9,23 @@
 .media-card-trailer{grid-column:1/-1}.media-embed-wrap{background:#24335b;aspect-ratio:16/9}.media-embed{width:100%;height:100%;display:block;border:0}
 @media(max-width:800px){.media-gallery{grid-template-columns:1fr 1fr}.media-gallery img{height:150px}.media-gallery img:last-child{grid-column:1/-1}}
 @media(max-width:800px){.hero-art{aspect-ratio:4/3;min-height:0}}
+
+/* Three.js presentation and the tiny public table. The existing HTML remains the fallback for crawlers, slow connections, and reduced-motion users. */
+.hero-art-three{isolation:isolate;background:#101d3b;transform:translateZ(0)}
+.hero-art-three img{position:relative;z-index:1;opacity:.92;filter:saturate(1.04) contrast(1.02)}
+.hero-art-three .three-stage{position:absolute;z-index:2;inset:0;width:100%;height:100%;pointer-events:none;mix-blend-mode:screen;opacity:.8}
+.hero-art-glint{position:absolute;z-index:3;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.16) 46%,transparent 57%);transform:translateX(-110%);animation:art-glint 8s ease-in-out infinite}
+@keyframes art-glint{0%,55%{transform:translateX(-110%)}72%,100%{transform:translateX(110%)}}
+.play-lab{display:grid;grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr);gap:28px;align-items:stretch;padding:70px 0 18px}
+.play-lab-copy{padding:28px 4px 28px 0;align-self:center}
+.play-lab-copy h2{font-size:clamp(34px,4vw,56px);margin:8px 0 18px}
+.play-lab-copy>p:not(.section-index){max-width:450px;color:var(--muted);font-size:16px;line-height:1.7}
+.play-lab-notes{display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:24px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.9px}
+.mini-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;box-shadow:inset 2px 2px 3px rgba(255,255,255,.5);vertical-align:-1px}.mini-dot.blue{background:#49c2e0}.mini-dot.green{background:#78c98f}.mini-dot.gold{background:#e0b868}
+.mini-game-shell{overflow:hidden;background:#101d3b;color:#f8efcf;box-shadow:0 18px 44px rgba(24,36,64,.18);border:1px solid rgba(24,36,64,.28)}
+.mini-game-topline{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 17px;border-bottom:1px solid rgba(255,255,255,.14);font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:#9eaccd}.mini-game-topline strong{color:#f5cf7b;font-size:10px;text-align:right}
+.mini-game-stage{position:relative;height:345px;background:radial-gradient(circle at 50% 45%,#3c578a,#142442 72%);touch-action:none}.mini-game-stage canvas{width:100%;height:100%;display:block;cursor:pointer}.mini-game-stage:after{content:"";position:absolute;inset:0;pointer-events:none;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 0 70px rgba(4,9,24,.55)}
+.mini-game-vignette{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,20,42,.16),transparent 30%,rgba(7,14,30,.28))}.mini-team-label{position:absolute;z-index:2;left:18px;font-size:10px;letter-spacing:1.8px;font-weight:700;text-shadow:0 2px 6px #081129;pointer-events:none}.mini-team-sprout{top:20px;color:#b4e6a4}.mini-team-player{bottom:18px;color:#7be1ec}
+.mini-game-controls{display:flex;flex-wrap:wrap;gap:7px;padding:12px 14px;border-top:1px solid rgba(255,255,255,.12);align-items:center}.mini-game-controls button{border:1px solid rgba(255,255,255,.22);background:#1c3158;color:#f8efcf;border-radius:3px;padding:8px 9px;font-size:10px;font-weight:700;letter-spacing:.5px;cursor:pointer;transition:.18s ease}.mini-game-controls button:hover:not(:disabled){background:#2fa7bb;color:#06152c;transform:translateY(-1px)}.mini-game-controls button:disabled{cursor:not-allowed;opacity:.32}.mini-game-controls button[data-game-action="restart"]{margin-left:auto;background:#df6b38;border-color:#df6b38;color:white}.mini-score,.mini-turn{font-size:10px;color:#9eaccd;text-transform:uppercase;letter-spacing:1px;margin-right:6px}.mini-score strong,.mini-turn strong{color:#fff;font:700 18px Georgia,serif;margin-left:4px}.mini-game-help{margin:0;padding:0 16px 15px;color:#899abd;font-size:11px;line-height:1.55}
+@media(max-width:800px){.play-lab{grid-template-columns:1fr;padding-top:48px}.play-lab-copy{padding:0}.mini-game-stage{height:300px}.mini-game-topline{align-items:flex-start;flex-direction:column;gap:5px}.mini-game-topline strong{text-align:left}.mini-game-controls button[data-pit]{flex:1 1 calc(33.33% - 7px)}}
+@media(prefers-reduced-motion:reduce){.hero-art-glint{animation:none;display:none}.hero-art-three .three-stage{opacity:.25}}
