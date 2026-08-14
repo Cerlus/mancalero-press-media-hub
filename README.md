@@ -1,6 +1,6 @@
 # Mancalero Press & Media Hub
 
-Public-facing companion to the Mancalero Launch Command Center. The visual language follows the existing private dashboard: warm paper, navy ink, serif display type, compact uppercase labels, colored edge accents, and a marble rail motif. The hub also includes a lightweight Three.js marble scene and a small, restartable browser round against Sprout.
+Public-facing companion to the Mancalero Launch Command Center. The visual language follows the existing private dashboard and the game itself: warm paper, navy ink, serif display type, compact uppercase labels, colored edge accents, and a marble rail motif. The hub also includes a small, restartable 2D browser round against Sprout with pits, stores, scoring, captures, extra turns, and synthesized SFX.
 
 ## GitHub Pages setup
 
@@ -30,7 +30,7 @@ Then add `press.archius.dev` under **Settings > Pages > Custom domain**. GitHub 
 - `assets/downloads/`: creator-friendly B-roll ZIP
 - `assets/branding/`: key art, capsule art, and branding guide
 
-The supplied capsule art, logos, screenshots, GIFs, gameplay clips, official YouTube trailer, press-kit ZIP, and creator B-roll ZIP are included. Three.js is loaded from a pinned public module URL so the site remains a no-build GitHub Pages deployment. The public press contact is `needle-blares.0m@icloud.com`.
+The supplied capsule art, logos, screenshots, GIFs, gameplay clips, official YouTube trailer, press-kit ZIP, and creator B-roll ZIP are included. The browser round uses native HTML, CSS, JavaScript, and Web Audio so the site remains a no-build GitHub Pages deployment. The public press contact is `needle-blares.0m@icloud.com`.
 
 ## Relationship to the Command Center
 
