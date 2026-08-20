@@ -7,7 +7,7 @@
 - Developer profile: Ghanaian-Canadian solo indie developer
 - Genre: Roguelike deckbuilder, strategy, board game
 - Platform: Windows, macOS, and Linux via Steam
-- Playtest: Live now; no key required
+- Playtest: Completed August 7–16, 2026; no key required
 - Public demo: September 15, 2026
 - Full release target: November 5, 2026 (tentative)
 - Price target: $12.99 USD; 10% launch sale planned
@@ -56,7 +56,7 @@ The core distinction is the combination of tactile Mancala sowing, marble build-
 
 ### What is the release plan?
 
-The public Steam Playtest is live now. The current roadmap is a September 15 public demo and a tentative November 5, 2026 full release.
+The public Steam Playtest ran August 7–16, 2026. The current roadmap is a September 15 public demo and a tentative November 5, 2026 full release.
 
 ### Who is it for?
 
@@ -68,4 +68,16 @@ Mancalero turns Mancala into a roguelike combo engine: build a pouch of special 
 
 ## Showcase submission paragraph
 
-Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a modern roguelike deckbuilder. It combines a timeless board-game foundation with special marble synergies, evolving boards, rule-changing bosses, and tactile paper-pixel presentation. The game is approaching an early-August playtest, a September public demo, and a November 2026 release.
+Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a modern roguelike deckbuilder. It combines a timeless board-game foundation with special marble synergies, evolving boards, rule-changing bosses, and tactile paper-pixel presentation. The public Playtest ran August 7–16, the public demo is planned for September 15, and the full release is tentatively targeted for November 2026.
+
+
+## Showcase applications
+
+- **BGM Game Expo Winter 2026** — submitted August 20, 2026 through the ExplicitoryEmail Gmail / ArchiusDev YouTube account; awaiting selection. Banner: https://bgmexpo.com/files/banner.jpg
+
+## Current media
+
+- Official key art: `assets/branding/mancalero-key-art-1920x1080.png`
+- How One Turn Works walkthrough: `assets/trailers/how-one-turn-works.mp4`
+- Nine current Steam screenshots: `assets/screenshots/steam/`
+- Updated public media hub: https://cerlus.github.io/mancalero-press-media-hub/
