@@ -6,12 +6,16 @@
 - Developer: ArchiusDev
 - Developer profile: Ghanaian-Canadian solo indie developer
 - Genre: Roguelike deckbuilder, strategy, board game
-- Platform: Windows PC via Steam
-- Playtest: Early August 2026
-- Public demo: September 2026
-- Full release target: November 2026
+- Platform: Windows, macOS, and Linux via Steam
+- Playtest: Completed August 7–16, 2026; no key required
+- Public demo: September 15, 2026
+- Full release target: November 4, 2026 (currently planned on Steam)
+- Price target: $12.99 USD; 10% launch sale planned
 - Steam: https://store.steampowered.com/app/4811700/Mancalero/
 - OST: https://youtu.be/9H9Xf3YLuuQ?si=cAwMLArpoiDHiaRB
+- Discord: https://discord.gg/aWSUUYeFTD
+- Bilibili: https://space.bilibili.com/3707052637554989
+- TikTok: https://www.tiktok.com/@archiusgamedev
 - Press contact: needle-blares.0m@icloud.com
 
 ## Short pitches
@@ -36,6 +40,14 @@ Mancalero is a roguelike deckbuilder inspired by Mancala. Build a pouch filled w
 
 ArchiusDev is a Ghanaian-Canadian solo indie developer creating thoughtful strategy games that blend timeless mechanics with modern design. Mancalero is the studio's first commercial game, reimagining Mancala as a tactile roguelike deckbuilder.
 
+## IndieX-ready media exports
+
+- Square preview: `assets/branding/indiex-preview-square.jpg` — 1000 × 1000, clean artwork crop with no title, UI, or logo overlay.
+- Square capsule: `assets/branding/mancalero-square-capsule.png` — 2160 × 2160, titled capsule artwork for cover/profile use.
+- High-resolution key art: `assets/branding/mancalero-key-art-1920x1080.png` — 1920 × 1080 PNG.
+- High-resolution logo: `assets/logos/mancalero-title-1920x1080.png` — transparent logo export.
+- Existing gameplay media and screenshots are available in `assets/trailers/`, `assets/screenshots/`, and `assets/gifs/`.
+
 ## FAQ answers
 
 ### What is Mancalero?
@@ -52,7 +64,7 @@ The core distinction is the combination of tactile Mancala sowing, marble build-
 
 ### What is the release plan?
 
-The current roadmap is an early-August playtest, a public demo in September, and a full release in November 2026.
+The public Steam Playtest ran from August 7–16, 2026. The free public demo launches September 15, 2026, and the full game is currently planned for release on November 4, 2026.
 
 ### Who is it for?
 
@@ -60,8 +72,8 @@ Players who enjoy roguelike deckbuilders, strategy games, board games, readable 
 
 ## Creator outreach opener
 
-Mancalero turns Mancala into a roguelike combo engine: build a pouch of special marbles, sow them to trigger ridiculous chain reactions, and face bosses that change the board's rules. The demo is designed for readable strategy, surprising builds, and highly clip-able score explosions.
+Mancalero turns Mancala into a roguelike combo engine: build a pouch of special marbles, sow them to trigger ridiculous chain reactions, and face bosses that change the board's rules. The free demo launches September 15, 2026 and is designed for readable strategy, surprising builds, and highly clip-able score explosions.
 
 ## Showcase submission paragraph
 
-Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a modern roguelike deckbuilder. It combines a timeless board-game foundation with special marble synergies, evolving boards, rule-changing bosses, and tactile paper-pixel presentation. The game is approaching an early-August playtest, a September public demo, and a November 2026 release.
+Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a modern roguelike deckbuilder. It combines a timeless board-game foundation with special marble synergies, evolving boards, rule-changing bosses, and tactile paper-pixel presentation. The public August 7–16 playtest has concluded; the free demo launches September 15, 2026, followed by a currently planned November 4, 2026 full release.
