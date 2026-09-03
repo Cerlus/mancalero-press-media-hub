@@ -12,12 +12,12 @@ This page is the source note for the public press-kit banner. “Applied” mean
 | IndieX 2026 | Applied | Submitted by the developer; key-allocation details are kept private. |
 | Steam Next Fest — October 2026 | Registered | Registration and the September 15, 2026 demo date were confirmed in Steamworks. |
 | Best Indie Games | Applied | Submitted and verified by the developer through the official developer form. |
+| INDIE Live Expo 2026.12.1 / INDIE Waves | Applied | Submitted September 3, 2026 through the official entry form; public media mirror supplied. |
 
 ## Prepared, not submitted
 
 | Opportunity | Status | Key requirement |
 |---|---|---|
-| INDIE Live Expo 2026.12.1 / INDIE Waves | Prepared | Free application; no Steam key field found. Public media mirror is now available at the INDIE Live section of this press kit. |
 | Games Without AI Showcase | Prepared | Screening decision pending; disclose AI-assisted code/localization honestly. |
 | Indie Hunt | Prepared | Login-gated form; no public deadline or key request found. |
 | SteamPeek | Contact sent | Discovery listing pitch sent; no key requested. |
