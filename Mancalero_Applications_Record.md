@@ -9,7 +9,7 @@ This page is the source note for the public press-kit banner. “Applied” mean
 | Opportunity | Status | Record |
 |---|---|---|
 | BGM Game Expo Winter 2026 | Applied | Submitted by the developer using the ArchiusDev YouTube-associated account email. |
-| IndieX 2026 | Applied | Submitted by the developer; the first ten press keys were allocated to this submission. |
+| IndieX 2026 | Applied | Submitted by the developer; key-allocation details are kept private. |
 | Steam Next Fest — October 2026 | Registered | Registration and the September 15, 2026 demo date were confirmed in Steamworks. |
 
 ## Prepared, not submitted
