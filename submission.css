@@ -1,0 +1,22 @@
+/* Public INDIE Live Expo submission mirror: each card maps to one form asset. */
+.submission-callout{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 24px;margin-bottom:22px;border:1px solid var(--line);border-left:4px solid var(--teal);background:var(--paper-2);box-shadow:var(--shadow)}
+.submission-callout .label{display:block;margin-bottom:5px}
+.submission-callout strong{display:block;font:24px Georgia,serif}
+.submission-callout p{margin:5px 0 0;color:var(--muted);font-size:13px}
+.submission-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.submission-card{background:var(--paper-2);box-shadow:var(--shadow);min-width:0}
+.submission-preview{aspect-ratio:16/9;background:#24335b;overflow:hidden}
+.submission-card-square .submission-preview{aspect-ratio:1}
+.submission-preview img,.submission-preview video{display:block;width:100%;height:100%;object-fit:cover}
+.submission-preview video{background:#24335b}
+.submission-card-body{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;padding:16px}
+.submission-card-body .label{display:block;font-size:9px;line-height:1.4}
+.submission-card-body h3{font-size:21px;margin:7px 0 5px}
+.submission-card-body p{margin:0;color:var(--muted);font-size:12px;line-height:1.45}
+.submission-link{flex:0 0 auto;color:var(--coral);font-size:11px;font-weight:700;letter-spacing:.8px;text-decoration:none;text-transform:uppercase;white-space:nowrap}
+.submission-notes{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.submission-notes h3{font-size:26px;margin:8px 0 10px}
+.submission-notes p,.submission-notes li{color:var(--muted);font-size:14px}
+.submission-notes ul{margin:8px 0 0;padding-left:20px}
+.submission-notes li{margin:4px 0}
+@media(max-width:800px){.submission-callout{align-items:flex-start;flex-direction:column;padding:18px}.submission-grid,.submission-notes{grid-template-columns:1fr}.submission-card-body{align-items:flex-start;flex-direction:column}.submission-link{white-space:normal}}
