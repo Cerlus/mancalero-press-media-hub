@@ -13,6 +13,7 @@ This page is the source note for the public press-kit banner. “Applied” mean
 | Steam Next Fest — October 2026 | Registered | Registration and the September 15, 2026 demo date were confirmed in Steamworks. |
 | Best Indie Games | Applied | Submitted and verified by the developer through the official developer form. |
 | INDIE Live Expo 2026.12.1 / INDIE Waves | Applied | Submitted September 3, 2026 through the official entry form; public media mirror supplied. |
+| Support the Indies (Helix / DFF) | Applied | Submitted September 3, 2026 through the official game-submission form; no key was required. |
 
 ## Prepared, not submitted
 
@@ -28,5 +29,6 @@ This page is the source note for the public press-kit banner. “Applied” mean
 - IndieX: https://indiex.online/submitgame/
 - Steam Next Fest October 2026: https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2026october
 - INDIE Live Expo entry: https://indie.live-expo.games/en/entry/
+- Support the Indies: https://helixtools.org/support-the-indies
 - Games Without AI: https://devlandmarketing.com/games-without-ai-showcase
 - Best Indie Games developer form: https://www.thebestindiegames.com/contact
