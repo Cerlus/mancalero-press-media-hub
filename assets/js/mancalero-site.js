@@ -65,8 +65,9 @@ if (root instanceof HTMLElement) {
     }
 
     function playCapture() {
+      const round = state;
       [659.25, 783.99, 1046.5].forEach((frequency, index) => {
-        window.setTimeout(() => playTone(frequency, 0.14, 0.05, "triangle"), index * 55);
+        window.setTimeout(() => { if (state === round) playTone(frequency, 0.14, 0.05, "triangle"); }, index * 55);
       });
     }
 
@@ -147,6 +148,7 @@ if (root instanceof HTMLElement) {
     }
 
     async function sow(side, pitIndex) {
+      const round = state;
       const ring = side === "player" ? playerRing() : sproutRing();
       const values = state[side];
       const marbleCount = values[pitIndex];
@@ -168,6 +170,7 @@ if (root instanceof HTMLElement) {
         playTone(NOTE_FREQUENCIES[step % NOTE_FREQUENCIES.length]);
         render();
         await wait(105);
+        if (state !== round) return false;
       }
 
       if (!lastSlot.store && lastSlot.side === side) {
@@ -187,6 +190,7 @@ if (root instanceof HTMLElement) {
           playCapture();
           setStatus(side === "player" ? `Captured ${captured + 1} marbles — score engine online.` : `Sprout captured ${captured + 1} marbles.`);
           await wait(380);
+          if (state !== round) return false;
         }
       }
       return Boolean(lastSlot.store && lastSlot.side === side);
@@ -202,7 +206,9 @@ if (root instanceof HTMLElement) {
       state.sprout.fill(0);
     }
 
-    function finishRound(message = "Table complete — restart whenever you want another line.") {
+    function finishRound(message = state.score >= TARGET_SCORE
+      ? `Target reached! ${state.score} / ${TARGET_SCORE} points — restart to try another strategy.`
+      : `Table complete: ${state.score} / ${TARGET_SCORE} points — restart to try for the target.`) {
       state.ended = true;
       state.busy = false;
       playTone(1046.5, 0.22, 0.065, "triangle");
@@ -212,9 +218,11 @@ if (root instanceof HTMLElement) {
     async function playerMove(index) {
       if (state.busy || state.ended || state.player[index] < 1) return;
       ensureAudio();
+      const round = state;
       state.busy = true;
       setStatus(`Sowing Pit ${index + 1}…`);
       const extraTurn = await sow("player", index);
+      if (state !== round) return;
       if (state.player.every((value) => value === 0) || state.sprout.every((value) => value === 0)) {
         collectRemaining();
         finishRound();
@@ -225,10 +233,21 @@ if (root instanceof HTMLElement) {
         setStatus("Extra turn — choose another blue pit.");
         return;
       }
-      await wait(420);
-      const sproutIndex = state.sprout.reduce((best, value, candidate) => value > state.sprout[best] ? candidate : best, 0);
-      setStatus(`Sprout is sowing Pit ${sproutIndex + 1}…`);
-      await sow("sprout", sproutIndex);
+      let sproutExtraTurn;
+      do {
+        await wait(420);
+        if (state !== round) return;
+        const sproutIndex = state.sprout.reduce((best, value, candidate) => value > state.sprout[best] ? candidate : best, 0);
+        setStatus(`Sprout is sowing Pit ${sproutIndex + 1}…`);
+        sproutExtraTurn = await sow("sprout", sproutIndex);
+        if (state !== round) return;
+        if (state.player.every((value) => value === 0) || state.sprout.every((value) => value === 0)) {
+          collectRemaining();
+          finishRound();
+          return;
+        }
+        if (sproutExtraTurn) setStatus("Sprout earned an extra turn.");
+      } while (sproutExtraTurn);
       state.turn += 1;
       if (state.turn > TURN_LIMIT || state.player.every((value) => value === 0) || state.sprout.every((value) => value === 0)) {
         if (state.player.every((value) => value === 0) || state.sprout.every((value) => value === 0)) collectRemaining();

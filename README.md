@@ -36,4 +36,4 @@ The supplied capsule art, logos, screenshots, GIFs, gameplay clips, official You
 
 ## Relationship to the Command Center
 
-The Launch Command Center remains the private operational dashboard. This site is the public source for press, creators, showcases, festivals, and other external contacts. The footer links back to the dashboard without exposing private planning content.
+The Launch Command Center remains the private operational dashboard. This site is the public source for press, creators, showcases, festivals, and other external contacts. The public footer deliberately does not link to the private dashboard.
