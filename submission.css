@@ -20,3 +20,4 @@
 .submission-notes ul{margin:8px 0 0;padding-left:20px}
 .submission-notes li{margin:4px 0}
 @media(max-width:800px){.submission-callout{align-items:flex-start;flex-direction:column;padding:18px}.submission-grid,.submission-notes{grid-template-columns:1fr}.submission-card-body{align-items:flex-start;flex-direction:column}.submission-link{white-space:normal}}
+.submission-link:focus-visible, .submission-card a:focus-visible { outline:3px solid var(--coral); outline-offset:3px; }
