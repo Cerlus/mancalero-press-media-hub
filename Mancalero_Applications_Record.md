@@ -1,6 +1,6 @@
 # Mancalero — application record
 
-Last updated: September 3, 2026 (America/Toronto)
+Last updated: September 5, 2026 (America/Toronto)
 
 This page is the source note for the public press-kit banner. “Applied” means the developer confirmed a submission; “Registered” means the developer confirmed event registration. Prepared opportunities are intentionally not presented as applications.
 
@@ -14,12 +14,12 @@ This page is the source note for the public press-kit banner. “Applied” mean
 | Best Indie Games | Applied | Submitted and verified by the developer through the official developer form. |
 | INDIE Live Expo 2026.12.1 / INDIE Waves | Applied | Submitted September 3, 2026 through the official entry form; public media mirror supplied. |
 | Support the Indies (Helix / DFF) | Applied | Submitted September 3, 2026 through the official game-submission form; no key was required. |
+| Games Without AI Showcase | Applied | Developer application recorded September 5, 2026. The Steam event portion is November 25–December 6, 2026; the wider showcase is scheduled through February 25, 2027. |
 
 ## Prepared, not submitted
 
 | Opportunity | Status | Key requirement |
 |---|---|---|
-| Games Without AI Showcase | Prepared | Screening decision pending; disclose AI-assisted code/localization honestly. |
 | Indie Hunt | Prepared | Login-gated form; no public deadline or key request found. |
 | SteamPeek | Contact sent | Discovery listing pitch sent; no key requested. |
 

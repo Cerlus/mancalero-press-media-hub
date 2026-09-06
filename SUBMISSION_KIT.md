@@ -74,6 +74,7 @@ Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a mo
 ## Showcase applications
 
 - **BGM Game Expo Winter 2026** — submitted August 20, 2026 through the ExplicitoryEmail Gmail / ArchiusDev YouTube account; awaiting selection. Banner: https://bgmexpo.com/files/banner.jpg
+- **Games Without AI Showcase** — developer application recorded September 5, 2026; Steam event portion November 25–December 6, 2026, with the wider showcase scheduled through February 25, 2027. Application: https://devlandmarketing.com/games-without-ai-showcase
 
 ## Current media
 
