@@ -1,6 +1,6 @@
 # Mancalero — application record
 
-Last updated: September 5, 2026 (America/Toronto)
+Last updated: September 7, 2026 (America/Toronto)
 
 This page is the source note for the public press-kit banner. “Applied” means the developer confirmed a submission; “Registered” means the developer confirmed event registration. Prepared opportunities are intentionally not presented as applications.
 
@@ -14,7 +14,12 @@ This page is the source note for the public press-kit banner. “Applied” mean
 | Best Indie Games | Applied | Submitted and verified by the developer through the official developer form. |
 | INDIE Live Expo 2026.12.1 / INDIE Waves | Applied | Submitted September 3, 2026 through the official entry form; public media mirror supplied. |
 | Support the Indies (Helix / DFF) | Applied | Submitted September 3, 2026 through the official game-submission form; no key was required. |
-| Games Without AI Showcase | Applied | Developer application recorded September 5, 2026. The Steam event portion is November 25–December 6, 2026; the wider showcase is scheduled through February 25, 2027. |
+
+## Closed / not selected
+
+| Opportunity | Status | Record |
+|---|---|---|
+| Games Without AI Showcase | Not selected | Application recorded September 5, 2026; outcome recorded September 7, 2026. Retained here for a complete application history. |
 
 ## Prepared, not submitted
 
@@ -22,6 +27,8 @@ This page is the source note for the public press-kit banner. “Applied” mean
 |---|---|---|
 | Indie Hunt | Prepared | Login-gated form; no public deadline or key request found. |
 | SteamPeek | Contact sent | Discovery listing pitch sent; no key requested. |
+| Game*Spark | Prepared | Official IID editorial contact form; not submitted. |
+| IGF 2027 | Watchlist | Fee-waiver route considered; no application submitted. |
 
 ## Source links
 
@@ -32,3 +39,5 @@ This page is the source note for the public press-kit banner. “Applied” mean
 - Support the Indies: https://helixtools.org/support-the-indies
 - Games Without AI: https://devlandmarketing.com/games-without-ai-showcase
 - Best Indie Games developer form: https://www.thebestindiegames.com/contact
+- Game*Spark editorial contact: https://www.iid.co.jp/contact/media_contact.html?recipient=gamespark
+- IGF submission information: https://igf.com/submission-info/
