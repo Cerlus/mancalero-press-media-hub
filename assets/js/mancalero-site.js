@@ -2,7 +2,7 @@ const root = document.querySelector("[data-mancalero-mini]");
 
 if (root instanceof HTMLElement) {
   const STARTING_PITS = [4, 4, 4, 4, 4, 4];
-  const TARGET_SCORE = 120;
+  const TARGET_SCORE = 250;
   const TURN_LIMIT = 8;
   const NOTE_FREQUENCIES = [523.25, 587.33, 659.25, 698.46, 783.99, 880, 987.77, 1046.5, 1174.66, 1318.51, 1396.91, 1567.98];
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

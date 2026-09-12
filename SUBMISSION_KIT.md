@@ -16,6 +16,7 @@
 - Discord: https://discord.gg/aWSUUYeFTD
 - Bilibili: https://space.bilibili.com/3707052637554989
 - TikTok: https://www.tiktok.com/@archiusgamedev
+- Linktree: https://linktr.ee/archiusdev
 - Press contact: needle-blares.0m@icloud.com
 
 ## Short pitches
@@ -81,6 +82,6 @@ Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a mo
 ## Current media
 
 - Official key art: `assets/branding/mancalero-key-art-1920x1080.png`
-- How One Turn Works walkthrough: `assets/trailers/how-one-turn-works.mp4`
 - Nine current Steam screenshots: `assets/screenshots/steam/`
+- Selected marble reference gallery: `assets/marbles/` (the demo includes a subset)
 - Updated public media hub: https://cerlus.github.io/mancalero-press-media-hub/
