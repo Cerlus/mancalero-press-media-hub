@@ -254,3 +254,47 @@ if (root instanceof HTMLElement) {
     render();
   }
 }
+
+const marbleCarousel = document.querySelector("[data-marble-carousel]");
+
+if (marbleCarousel instanceof HTMLElement) {
+  const slides = Array.from(marbleCarousel.querySelectorAll(".marble-thumb"));
+  const previousButton = marbleCarousel.querySelector("[data-marble-prev]");
+  const nextButton = marbleCarousel.querySelector("[data-marble-next]");
+  const captionElement = marbleCarousel.parentElement?.querySelector("[data-marble-caption]");
+  const positionElement = marbleCarousel.parentElement?.querySelector("[data-marble-position]");
+
+  if (slides.length > 0 && previousButton instanceof HTMLButtonElement && nextButton instanceof HTMLButtonElement) {
+    let activeIndex = Math.max(0, slides.findIndex((slide) => slide.classList.contains("is-active")));
+
+    function showMarble(index) {
+      activeIndex = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === activeIndex;
+        slide.classList.toggle("is-active", isActive);
+        slide.setAttribute("aria-hidden", String(!isActive));
+        if (isActive) slide.removeAttribute("tabindex");
+        else slide.setAttribute("tabindex", "-1");
+      });
+
+      const activeSlide = slides[activeIndex];
+      const name = activeSlide.querySelector("span")?.textContent?.trim() || `Marble ${activeIndex + 1}`;
+      if (captionElement) captionElement.textContent = name;
+      if (positionElement) positionElement.textContent = `${activeIndex + 1} / ${slides.length}`;
+    }
+
+    previousButton.addEventListener("click", () => showMarble(activeIndex - 1));
+    nextButton.addEventListener("click", () => showMarble(activeIndex + 1));
+    marbleCarousel.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        showMarble(activeIndex - 1);
+      }
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        showMarble(activeIndex + 1);
+      }
+    });
+    showMarble(activeIndex);
+  }
+}
