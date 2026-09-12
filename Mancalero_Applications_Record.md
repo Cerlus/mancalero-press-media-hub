@@ -1,6 +1,6 @@
 # Mancalero — application record
 
-Last updated: September 7, 2026 (America/Toronto)
+Last updated: September 12, 2026 (America/Toronto)
 
 This page is the source note for the public press-kit banner. “Applied” means the developer confirmed a submission; “Registered” means the developer confirmed event registration. Prepared opportunities are intentionally not presented as applications.
 
@@ -19,7 +19,11 @@ This page is the source note for the public press-kit banner. “Applied” mean
 
 | Opportunity | Status | Record |
 |---|---|---|
-| Games Without AI Showcase | Not selected | Application recorded September 5, 2026; outcome recorded September 7, 2026. Retained here for a complete application history. |
+| Games Without AI Showcase | Not selected for official Steam event; promotional sharing permitted | Application recorded September 5, 2026; outcome recorded September 7, 2026. On September 12, AndreaG of DevLand Marketing clarified that Mancalero may be shared through DevLand social posts, press kits, and private keys to press/influencers, but will not be included in the official Steam event with Valve because of the AI-use detection caveat. Do not describe this as Valve event participation. |
+
+### Public wording
+
+Mancalero is eligible for DevLand Marketing’s Games Without AI promotional sharing, but is not an official participant in the Valve Steam event.
 
 ## Prepared, not submitted
 
