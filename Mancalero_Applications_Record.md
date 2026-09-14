@@ -1,6 +1,6 @@
 # Mancalero — application record
 
-Last updated: September 12, 2026 (America/Toronto)
+Last updated: September 14, 2026 (America/Toronto)
 
 This page is the source note for the public press-kit banner. “Applied” means the developer confirmed a submission; “Registered” means the developer confirmed event registration. Prepared opportunities are intentionally not presented as applications.
 
@@ -14,6 +14,7 @@ This page is the source note for the public press-kit banner. “Applied” mean
 | Best Indie Games | Applied | Submitted and verified by the developer through the official developer form. |
 | INDIE Live Expo 2026.12.1 / INDIE Waves | Applied | Submitted September 3, 2026 through the official entry form; public media mirror supplied. |
 | Support the Indies (Helix / DFF) | Applied | Submitted September 3, 2026 through the official game-submission form; no key was required. |
+| Game*Spark | Applied | Submitted September 7, 2026 through the official IID release-submission form; the form confirmed that the inquiry was sent. |
 
 ## Closed / not selected
 
@@ -31,7 +32,6 @@ Mancalero is eligible for DevLand Marketing’s Games Without AI promotional sha
 |---|---|---|
 | Indie Hunt | Prepared | Login-gated form; no public deadline or key request found. |
 | SteamPeek | Contact sent | Discovery listing pitch sent; no key requested. |
-| Game*Spark | Prepared | Official IID editorial contact form; not submitted. |
 | IGF 2027 | Watchlist | Fee-waiver route considered; no application submitted. |
 
 ## Source links

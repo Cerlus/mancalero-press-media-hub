@@ -29,11 +29,11 @@ Then add `press.archius.dev` under **Settings > Pages > Custom domain**. GitHub 
 - `assets/marbles/`: selected marble reference icons for the public gallery
 - `assets/press-kit/`: downloadable ZIP and fact sheet
 - `assets/downloads/`: creator-friendly B-roll ZIP
-- `assets/branding/`: key art, capsule art, and branding guide
+- `assets/branding/`: key art, the complete native-size Steam capsule suite, and branding guide
 - `assets/submissions/indie-live-expo-2026/`: direct-download mirror and specification note for the INDIE Live Expo package
 - `Mancalero_Applications_Record.md`: confirmed showcase applications/registrations and clearly separated preparation status
 
-The supplied capsule art, logos, screenshots, GIFs, gameplay clips, official YouTube trailer, selected marble icons, press-kit ZIP, and creator B-roll ZIP are included. The browser round uses native HTML, CSS, JavaScript, and Web Audio so the site remains a no-build GitHub Pages deployment. The public press contact is `needle-blares.0m@icloud.com`, and the social hub is https://linktr.ee/archiusdev.
+The supplied capsule art, logos, screenshots, GIFs, gameplay clips, official YouTube trailer, selected marble icons, press-kit ZIP, and creator B-roll ZIP are included. The Media section includes all nine supplied Steam capsule exports at native dimensions and offers each original PNG as a direct download. The browser round uses native HTML, CSS, JavaScript, and Web Audio so the site remains a no-build GitHub Pages deployment. The public press contact is `needle-blares.0m@icloud.com`, and the social hub is https://linktr.ee/archiusdev.
 
 ## Relationship to the Command Center
 

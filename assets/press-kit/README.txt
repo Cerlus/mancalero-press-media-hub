@@ -1,6 +1,20 @@
 MANCALERO / UPDATED PRESS KIT — SEPTEMBER 2026
 
-The live press hub includes the official 1920×1080 key art, nine current Steam screenshots, and a selected marble reference gallery. Each image is linked individually from the Media section for direct opening or download. The marble gallery is a broader development reference set; the public demo includes a subset.
+The live press hub includes the official 1920×1080 key art, the complete Steam capsule suite at its native dimensions, nine current Steam screenshots, and a selected marble reference gallery. Each image is linked individually from the Media section for direct opening or download. The marble gallery is a broader development reference set; the public demo includes a subset.
+
+STEAM CAPSULE SUITE
+
+- Main capsule — 1232 × 706 PNG
+- Header capsule — 920 × 430 PNG
+- Header capsule (Indigo/Cyan outline alternate) — 920 × 430 PNG
+- Library capsule — 600 × 900 PNG
+- Library logo — 1280 × 720 PNG
+- Small capsule — 462 × 174 PNG
+- Vertical capsule — 748 × 896 PNG
+- Package header — 1414 × 464 PNG
+- Library hero — 3840 × 1240 PNG
+
+The two 920 × 430 header files are alternate treatments. The matching originals are in assets/branding/steam/ and are shown in the Media section without cropping.
 
 Playtest: completed August 7–16, 2026
 Public demo: September 15, 2026

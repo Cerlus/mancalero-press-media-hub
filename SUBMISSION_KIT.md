@@ -76,12 +76,13 @@ Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a mo
 
 - **BGM Game Expo Winter 2026** — submitted August 20, 2026 through the ExplicitoryEmail Gmail / ArchiusDev YouTube account; awaiting selection. Banner: https://bgmexpo.com/files/banner.jpg
 - **Games Without AI Showcase** — not selected for the official Valve Steam event, but DevLand Marketing confirmed promotional sharing on September 12, 2026 through social posts, press kits, and private keys to press/influencers. Do not describe Mancalero as an official Valve event participant. Application: https://devlandmarketing.com/games-without-ai-showcase
-- **Game*Spark** — editorial submission prepared but not yet submitted; use the official IID contact form: https://www.iid.co.jp/contact/media_contact.html?recipient=gamespark
+- **Game*Spark** — submitted September 7, 2026 through the official IID release-submission form; monitor for a reply: https://www.iid.co.jp/contact/media_contact.html?recipient=gamespark
 - **IGF 2027** — waiver-first watchlist item; no application submitted. Submission information: https://igf.com/submission-info/
 
 ## Current media
 
 - Official key art: `assets/branding/mancalero-key-art-1920x1080.png`
+- Complete Steam capsule suite: `assets/branding/steam/` (native-size PNG exports: 1232×706 main, 920×430 header plus Indigo/Cyan-outline alternate, 600×900 library, 1280×720 library logo, 462×174 small, 748×896 vertical, 1414×464 package header, and 3840×1240 library hero)
 - Nine current Steam screenshots: `assets/screenshots/steam/`
 - Selected marble reference gallery: `assets/marbles/` (the demo includes a subset)
 - Updated public media hub: https://cerlus.github.io/mancalero-press-media-hub/
