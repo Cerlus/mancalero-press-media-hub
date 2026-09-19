@@ -79,40 +79,21 @@
 
     <section class="play-lab shell" id="play">
       <div class="play-lab-copy">
-        <p class="section-index">01 / PLAY A ROUND</p>
-        <h2>Play one round against Sprout.</h2>
-        <p>Mancalero stripped to its ancient foundation: regular marbles, six pits, two stores, captures, extra turns, and a score to chase.</p>
-        <p class="mini-demo-note">ROUGH BROWSER DEMO · A compact preview of the core sowing loop, not the full game.</p>
-        <div class="play-lab-notes"><span><i class="mini-dot blue"></i>Sow your blue row</span><span><i class="mini-dot red"></i>Read Sprout’s response</span><span><i class="mini-dot gold"></i>Fill your store and score</span></div>
+        <p class="section-index">01 / PLAY THE DEMO</p>
+        <h2>Play the current Mancalero demo.</h2>
+        <p>The public demo is now available on Itch. Launch the playable build below to try Mancalero’s full three-table demo loop, including special marbles, blessings, bosses, and Endless Mode.</p>
+        <p class="mini-demo-note">PUBLIC ITCH DEMO · Opens the current playable build and download options.</p>
       </div>
-      <div class="mini-game-shell" data-mancalero-mini>
-        <div class="mini-toolbar">
-          <div class="turn-badge"><span>TURN</span><strong id="mini-turn-state">YOUR TURN</strong></div>
-          <div><span>STONE</span><strong>REGULAR</strong></div>
-          <div><span>TABLE</span><strong>1 / 1</strong></div>
-          <div><span>ROUND</span><strong><b id="mini-game-turn">1</b> / 8</strong></div>
-          <button type="button" class="mini-sound" data-game-action="sound" aria-pressed="true">SFX ON</button>
-        </div>
-        <div class="mini-opponent-card">
-          <div class="sprout-portrait" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div class="opponent-copy"><strong>Sprout</strong><em>“A novice gardener.”</em></div>
-          <div class="target-track"><span>SCORE NEEDED TO BEAT</span><div><i id="mini-score-progress"></i><b><span id="mini-game-score">0</span> / 250</b></div></div>
-        </div>
-        <div class="mancala-board" id="mini-board">
-          <div class="mini-store sprout-store"><span>OPP</span><div class="marble-pile" data-store-marbles="sprout"></div><strong data-store-count="sprout">0</strong></div>
-          <div class="mini-lanes">
-            <div class="mini-pit-row" id="sprout-pits" aria-label="Sprout pits"></div>
-            <div class="mini-pit-row" id="player-pits" aria-label="Your pits"></div>
-          </div>
-          <div class="mini-store player-store"><span>YOU</span><div class="marble-pile cool-pile" data-store-marbles="player"></div><strong data-store-count="player">0</strong></div>
-        </div>
-        <div class="mini-bottom-hud">
-          <div class="points-panel"><span>POINTS</span><strong id="mini-points">0</strong></div>
-          <div><span>YOUR STORE</span><strong id="mini-player-store">0</strong></div>
-          <div><span>SPROUT STORE</span><strong id="mini-sprout-store">0</strong></div>
-          <p id="mini-game-status" aria-live="polite">Choose one of your blue pits to sow.</p>
-          <button type="button" data-game-action="restart">Restart table</button>
-        </div>
+      <div class="itch-demo-embed" aria-label="Mancalero playable demo">
+        <a class="itch-card" href="https://archiusdev.itch.io/mancalero" target="_blank" rel="noopener noreferrer" aria-label="Play Mancalero - Official Demo on itch.io">
+          <span class="itch-card-art"><img src="assets/branding/mancalero-square-capsule.png" alt="Mancalero key art"></span>
+          <span class="itch-card-body">
+            <strong class="itch-card-title">Mancalero - Official Demo</strong>
+            <span class="itch-card-byline">by <b>ArchiusDev</b></span>
+            <span class="itch-card-description">The demo of the score-chasing Mancala roguelike. Sow marbles, build synergies and break the score.</span>
+            <span class="itch-card-action">Play on itch.io ↗</span>
+          </span>
+        </a>
       </div>
     </section>
 
@@ -145,21 +126,26 @@
     </section>
 
     <section class="section section-tinted shell" id="assets">
-      <div class="section-heading"><p class="section-index">04 / MEDIA</p><h2>Media assets</h2><p>Trailer, gameplay footage, screenshots, GIFs, soundtrack resources, and the complete Steam capsule suite for coverage and creator use.</p></div>
+      <div class="section-heading"><p class="section-index">04 / MEDIA</p><h2>Media assets</h2><p>Current Steam screenshots, key art, GIFs, soundtrack resources, and the complete Steam capsule suite for coverage and creator use.</p></div>
       <div class="media-grid">
-        <article class="media-card media-card-trailer"><div class="media-embed-wrap"><a class="media-trailer-poster" href="https://www.youtube.com/watch?v=F2Yncp_EXGs" target="_blank" rel="noreferrer" aria-label="Watch Mancalero (Demo) Trailer on YouTube"><img class="media-trailer-poster-image" src="assets/branding/mancalero-key-art-1920x1080.png" alt="Mancalero (Demo) Trailer"><span class="media-trailer-play" aria-hidden="true">▶</span><span class="media-trailer-label">Open trailer on YouTube ↗</span></a></div><div class="media-meta"><strong>Mancalero (Demo) Trailer</strong><a href="https://youtu.be/F2Yncp_EXGs">Watch on YouTube ↗</a></div></article>
         <article class="media-card media-card-large"><div class="media-key-art"><img src="assets/branding/mancalero-key-art-1920x1080.png" alt="Mancalero official 1920 by 1080 key art"></div><div class="media-meta"><strong>Official key art</strong><a href="assets/branding/mancalero-key-art-1920x1080.png">Download PNG ↗</a></div></article>
-        <article class="media-card media-card-large"><div class="media-gallery media-gallery-steam">
-          <a class="media-thumb" href="assets/screenshots/steam/01_how_a_turn_works_choose_a_pit.png" target="_blank" rel="noreferrer" download aria-label="Download screenshot 1: choose a pit"><img src="assets/screenshots/steam/01_how_a_turn_works_choose_a_pit.png" alt="Mancalero: choose a pit at the start of a turn"><span>01 ↗</span></a>
-          <a class="media-thumb" href="assets/screenshots/steam/02_how_a_turn_works_sow.png" target="_blank" rel="noreferrer" download aria-label="Download screenshot 2: sowing marbles"><img src="assets/screenshots/steam/02_how_a_turn_works_sow.png" alt="Mancalero: sowing marbles across the board"><span>02 ↗</span></a>
-          <a class="media-thumb" href="assets/screenshots/steam/03_how_a_turn_works_extra_turn.png" target="_blank" rel="noreferrer" download aria-label="Download screenshot 3: extra turn"><img src="assets/screenshots/steam/03_how_a_turn_works_extra_turn.png" alt="Mancalero: earning an extra turn"><span>03 ↗</span></a>
-          <a class="media-thumb" href="assets/screenshots/steam/04_sower_king_boss.png" target="_blank" rel="noreferrer" download aria-label="Download screenshot 4: Sower King boss"><img src="assets/screenshots/steam/04_sower_king_boss.png" alt="Mancalero: Sower King boss encounter"><span>04 ↗</span></a>
-          <a class="media-thumb" href="assets/screenshots/steam/05_lightning_streak.png" target="_blank" rel="noreferrer" download aria-label="Download screenshot 5: lightning streak"><img src="assets/screenshots/steam/05_lightning_streak.png" alt="Mancalero: lightning streak effect"><span>05 ↗</span></a>
-          <a class="media-thumb" href="assets/screenshots/steam/06_high_score_synergy.png" target="_blank" rel="noreferrer" download aria-label="Download screenshot 6: high-score synergy"><img src="assets/screenshots/steam/06_high_score_synergy.png" alt="Mancalero: high-score marble synergy"><span>06 ↗</span></a>
-          <a class="media-thumb" href="assets/screenshots/steam/07_the_bazaar.png" target="_blank" rel="noreferrer" download aria-label="Download screenshot 7: the Bazaar"><img src="assets/screenshots/steam/07_the_bazaar.png" alt="Mancalero: the Bazaar"><span>07 ↗</span></a>
-          <a class="media-thumb" href="assets/screenshots/steam/08_boss_defeated.png" target="_blank" rel="noreferrer" download aria-label="Download screenshot 8: boss defeated"><img src="assets/screenshots/steam/08_boss_defeated.png" alt="Mancalero: boss defeated"><span>08 ↗</span></a>
-          <a class="media-thumb" href="assets/screenshots/steam/09_campaign_table_progression.png" target="_blank" rel="noreferrer" download aria-label="Download screenshot 9: campaign progression"><img src="assets/screenshots/steam/09_campaign_table_progression.png" alt="Mancalero: campaign table progression"><span>09 ↗</span></a>
-        </div><div class="media-meta"><strong>Current Steam screenshot set</strong><span>Each image opens and downloads directly ↗</span></div></article>
+        <article class="media-card media-card-steam-screenshots">
+          <div class="media-gallery-heading"><div><span class="label">Steam store reference</span><h3>Current Steam screenshots</h3><p>This gallery mirrors the screenshot set currently published on the Steam store. Each frame keeps its full 16:9 composition instead of being cropped into a thumbnail.</p></div></div>
+          <div class="steam-screenshot-scroller" role="region" aria-label="Current Mancalero Steam store screenshots" tabindex="0">
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/adab21db1817d73ffede3b253ca8d62dcf4585bc/ss_adab21db1817d73ffede3b253ca8d62dcf4585bc.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/adab21db1817d73ffede3b253ca8d62dcf4585bc/ss_adab21db1817d73ffede3b253ca8d62dcf4585bc.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/8ee333f4004d99d5fab6303358d104ba94337353/ss_8ee333f4004d99d5fab6303358d104ba94337353.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/8ee333f4004d99d5fab6303358d104ba94337353/ss_8ee333f4004d99d5fab6303358d104ba94337353.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/8bdadd6ee9c3541c5942593b8bc717fa8826203d/ss_8bdadd6ee9c3541c5942593b8bc717fa8826203d.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/8bdadd6ee9c3541c5942593b8bc717fa8826203d/ss_8bdadd6ee9c3541c5942593b8bc717fa8826203d.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/38fb10d2d21d13e4160d96760a9fe7c3811fd1f8/ss_38fb10d2d21d13e4160d96760a9fe7c3811fd1f8.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/38fb10d2d21d13e4160d96760a9fe7c3811fd1f8/ss_38fb10d2d21d13e4160d96760a9fe7c3811fd1f8.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/66d2eb69fc37b52a50d77b9956218e6bdb444df0/ss_66d2eb69fc37b52a50d77b9956218e6bdb444df0.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/66d2eb69fc37b52a50d77b9956218e6bdb444df0/ss_66d2eb69fc37b52a50d77b9956218e6bdb444df0.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/13130a28d308b935a5c87290303eb3b74e151095/ss_13130a28d308b935a5c87290303eb3b74e151095.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/13130a28d308b935a5c87290303eb3b74e151095/ss_13130a28d308b935a5c87290303eb3b74e151095.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/d7f2e2bef471b6b990653f01cd6c7ca84304c1c1/ss_d7f2e2bef471b6b990653f01cd6c7ca84304c1c1.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/d7f2e2bef471b6b990653f01cd6c7ca84304c1c1/ss_d7f2e2bef471b6b990653f01cd6c7ca84304c1c1.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/99c461c2d3d55c1c95f296b49d0e504c59e42e30/ss_99c461c2d3d55c1c95f296b49d0e504c59e42e30.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/99c461c2d3d55c1c95f296b49d0e504c59e42e30/ss_99c461c2d3d55c1c95f296b49d0e504c59e42e30.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/2c80dfc2543d60167a79663647a7389959d11e78/ss_2c80dfc2543d60167a79663647a7389959d11e78.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/2c80dfc2543d60167a79663647a7389959d11e78/ss_2c80dfc2543d60167a79663647a7389959d11e78.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/0e58bf0f609bb1955f4431532abc38ef3b2be670/ss_0e58bf0f609bb1955f4431532abc38ef3b2be670.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/0e58bf0f609bb1955f4431532abc38ef3b2be670/ss_0e58bf0f609bb1955f4431532abc38ef3b2be670.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+            <a class="steam-screenshot-card" href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/ef507295bf7233c12dbe29e2323546471f126d29/ss_ef507295bf7233c12dbe29e2323546471f126d29.1920x1080.jpg?t=1789469530" target="_blank" rel="noreferrer" aria-label="Open current Steam store screenshot"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4811700/ef507295bf7233c12dbe29e2323546471f126d29/ss_ef507295bf7233c12dbe29e2323546471f126d29.1920x1080.jpg?t=1789469530" alt="Current Mancalero Steam store screenshot" width="1920" height="1080"></a>
+          </div>
+          <p class="steam-screenshot-hint">Scroll horizontally to browse · click any screenshot to open the full-size image ↗</p>
+        </article>
         <article class="media-card media-card-capsules">
           <div class="media-gallery-heading"><div><span class="label">Steam-ready branding</span><h3>Complete capsule suite</h3><p>Native-size PNG exports for the Steam store surfaces. Every preview preserves the full frame instead of cropping it; click a card to open or download the original.</p></div><span class="media-gallery-count">9 PNGs · 8 sizes</span></div>
           <div class="steam-capsule-grid">
@@ -217,14 +203,9 @@
       <div class="section-heading"><p class="section-index">05 / SUBMISSION PACKAGE</p><h2>INDIE Live Expo, ready to download.</h2><p>A public mirror of the exact media set prepared for INDIE Live Expo 2026.12.1. Use the matching download for each form field without needing Drive access.</p></div>
       <div class="submission-callout"><div><span class="label">INDIE LIVE EXPO 2026.12.1</span><strong>Submitted · awaiting selection</strong><p>Applied September 3, 2026 · event December 1, 2026 JST · public media mirror supplied.</p></div><a class="button button-primary" href="https://indie.live-expo.games/en/entry/">Open official entry ↗</a></div>
       <div class="submission-grid">
-        <article class="submission-card submission-card-video"><div class="submission-preview"><video controls preload="metadata" poster="assets/submissions/indie-live-expo-2026/ss1.jpg"><source src="assets/submissions/indie-live-expo-2026/Mancalero.mp4" type="video/mp4">Your browser does not support video playback.</video></div><div class="submission-card-body"><div><span class="label">Gameplay footage · 15 seconds</span><h3>Short gameplay clip</h3><p>1920 × 1080 · H.264/AAC · 60 fps</p></div><a class="submission-link" href="assets/submissions/indie-live-expo-2026/Mancalero.mp4" download>Download ↧</a></div></article>
-        <article class="submission-card submission-card-video"><div class="submission-preview"><video controls preload="metadata" poster="assets/submissions/indie-live-expo-2026/ss2.jpg"><source src="assets/submissions/indie-live-expo-2026/Mancalero_full.mp4" type="video/mp4">Your browser does not support video playback.</video></div><div class="submission-card-body"><div><span class="label">Gameplay footage · 35.41 seconds</span><h3>Full gameplay reel</h3><p>1920 × 1080 · H.264/AAC · 30 fps</p></div><a class="submission-link" href="assets/submissions/indie-live-expo-2026/Mancalero_full.mp4" download>Download ↧</a></div></article>
         <article class="submission-card submission-card-square"><div class="submission-preview"><img src="assets/submissions/indie-live-expo-2026/main.jpg" alt="Square preview artwork for Mancalero"></div><div class="submission-card-body"><div><span class="label">Preview screenshot · 1:1</span><h3>Square profile image</h3><p>800 × 800 · JPG · 121 KB · no text/UI/logo overlay</p></div><a class="submission-link" href="assets/submissions/indie-live-expo-2026/main.jpg" download>Download ↧</a></div></article>
-        <article class="submission-card"><div class="submission-preview"><img src="assets/submissions/indie-live-expo-2026/ss1.jpg" alt="Mancalero gameplay screenshot one"></div><div class="submission-card-body"><div><span class="label">High-res screenshot · 01</span><h3>Gameplay screenshot 01</h3><p>1920 × 1080 · JPG</p></div><a class="submission-link" href="assets/submissions/indie-live-expo-2026/ss1.jpg" download>Download ↧</a></div></article>
-        <article class="submission-card"><div class="submission-preview"><img src="assets/submissions/indie-live-expo-2026/ss2.jpg" alt="Mancalero gameplay screenshot two"></div><div class="submission-card-body"><div><span class="label">High-res screenshot · 02</span><h3>Gameplay screenshot 02</h3><p>1920 × 1080 · JPG</p></div><a class="submission-link" href="assets/submissions/indie-live-expo-2026/ss2.jpg" download>Download ↧</a></div></article>
-        <article class="submission-card"><div class="submission-preview"><img src="assets/submissions/indie-live-expo-2026/ss3.jpg" alt="Mancalero gameplay screenshot three"></div><div class="submission-card-body"><div><span class="label">High-res screenshot · 03</span><h3>Gameplay screenshot 03</h3><p>1920 × 1080 · JPG</p></div><a class="submission-link" href="assets/submissions/indie-live-expo-2026/ss3.jpg" download>Download ↧</a></div></article>
       </div>
-      <div class="submission-notes"><div><span class="label">For the form</span><h3>Match each field to the file above.</h3><p>Use the square profile image for <em>Preview Screenshot</em>, any of the three 16:9 images for <em>High Res Screenshot</em>, and the 15-second clip for <em>Gameplay Footage</em>. The longer reel is an optional reference asset.</p></div><div><span class="label">Specs checked</span><ul><li>Both videos are 1920 × 1080 MP4 files.</li><li>The short clip is exactly 15 seconds.</li><li>The square image is 1:1 and under 250 KB.</li><li>The screenshot set has no added UI, text, or logos.</li></ul></div></div>
+      <div class="submission-notes"><div><span class="label">For the form</span><h3>Use the current store reference above.</h3><p>The square profile image remains available here for <em>Preview Screenshot</em>. For high-resolution gameplay stills, use the current Steam screenshot gallery in the Media section.</p></div><div><span class="label">Specs checked</span><ul><li>The square image is 1:1 and under 250 KB.</li><li>The Steam gallery uses the live store screenshot set.</li><li>All visible media here is static for reliable press-kit browsing.</li></ul></div></div>
     </section>
 
     <section class="section shell" id="creators">
@@ -239,7 +220,7 @@
 
     <section class="section shell" id="downloads">
       <div class="section-heading"><p class="section-index">08 / DOWNLOADS</p><h2>Press kit and downloads</h2><p>Everything is kept at stable relative paths so old press links continue to work as the hub evolves.</p></div>
-      <div class="download-list"><a href="assets/press-kit/mancalero-press-kit.zip" class="download-row"><span>Press kit ZIP</span><small>Logos, screenshots, GIFs, fact sheet, and key art</small><b>↓</b></a><a href="assets/downloads/mancalero-broll.zip" class="download-row"><span>Gameplay B-roll</span><small>Clean footage for editors and creators</small><b>↓</b></a><a href="SUBMISSION_KIT.md" class="download-row"><span>Universal submission copy</span><small>Pitches, bios, FAQs, and reusable application answers</small><b>↗</b></a></div>
+      <div class="download-list"><a href="assets/press-kit/mancalero-press-kit.zip" class="download-row"><span>Press kit ZIP</span><small>Logos, screenshots, GIFs, fact sheet, and key art</small><b>↓</b></a><a href="SUBMISSION_KIT.md" class="download-row"><span>Universal submission copy</span><small>Pitches, bios, FAQs, and reusable application answers</small><b>↗</b></a></div>
     </section>
 
     <section class="section section-tinted shell" id="changelog">
