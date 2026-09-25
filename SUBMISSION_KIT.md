@@ -88,5 +88,8 @@ Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a mo
 - Nine current Steam screenshots: `assets/screenshots/steam/`
 - October 2026 Steam Next Fest demo-release trailer: `assets/trailers/mancalero-demo-release-trailer-october-2026-next-fest.mp4` (60.2 seconds, 1920×1080, 60 fps)
 - Trailer poster: `assets/trailers/mancalero-demo-release-trailer-poster.jpg`
+- Vertical social trailer: `assets/trailers/mancalero-demo-release-shorts-october-2026-next-fest.mp4` (full-resolution direct asset; 60.0 seconds, 1080×1920, 60 fps; YouTube Shorts / Instagram Reels / TikTok)
+- Optimized vertical copy for the downloadable ZIP: `assets/trailers/mancalero-demo-release-shorts-720x1280-press.mp4` (60.0 seconds, 720×1280, 30 fps)
+- Vertical trailer poster: `assets/trailers/mancalero-demo-release-shorts-poster.jpg`
 - Selected marble reference gallery: `assets/marbles/` (the demo includes a subset)
 - Updated public media hub: https://cerlus.github.io/mancalero-press-media-hub/

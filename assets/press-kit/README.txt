@@ -26,6 +26,9 @@ TRAILER
 
 - October 2026 Steam Next Fest demo-release trailer: assets/trailers/mancalero-demo-release-trailer-october-2026-next-fest.mp4
 - Trailer poster: assets/trailers/mancalero-demo-release-trailer-poster.jpg
+- Vertical social trailer: assets/trailers/mancalero-demo-release-shorts-october-2026-next-fest.mp4 (60.0 seconds, 1080 × 1920, 60 fps)
+- Optimized vertical social copy in the downloadable ZIP: assets/trailers/mancalero-demo-release-shorts-720x1280-press.mp4 (60.0 seconds, 720 × 1280, 30 fps)
+- Vertical trailer poster: assets/trailers/mancalero-demo-release-shorts-poster.jpg
 
 Creators and press can play the live public demo now. Include your channel or outlet and preferred coverage window if requesting early access to the full game later in October. Please do not redistribute private keys or game files.
 
