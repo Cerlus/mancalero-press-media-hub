@@ -17,10 +17,17 @@ STEAM CAPSULE SUITE
 The two 920 × 430 header files are alternate treatments. The matching originals are in assets/branding/steam/ and are shown in the Media section without cropping.
 
 Playtest: completed August 7–16, 2026
-Public demo: September 15, 2026
+Public demo: live since September 15, 2026
+Steam Next Fest: registered for October 19–26, 2026
+Upcoming update: v1.02 is in development with further balance, polish, and quality-of-life updates
 Tentative full release: November 4, 2026
 
-Creators and press may request limited private demo access before September 15, 2026. Include your channel or outlet and preferred coverage window. Access is limited and not guaranteed. Please do not redistribute private keys or game files.
+TRAILER
+
+- October 2026 Steam Next Fest demo-release trailer: assets/trailers/mancalero-demo-release-trailer-october-2026-next-fest.mp4
+- Trailer poster: assets/trailers/mancalero-demo-release-trailer-poster.jpg
+
+Creators and press can play the live public demo now. Include your channel or outlet and preferred coverage window if requesting early access to the full game later in October. Please do not redistribute private keys or game files.
 
 Press hub: https://cerlus.github.io/mancalero-press-media-hub/
 Steam: https://store.steampowered.com/app/4811700/Mancalero/?utm_source=press_kit&utm_medium=owned_web&utm_campaign=demo_launch_sep_2026&utm_content=steam_cta

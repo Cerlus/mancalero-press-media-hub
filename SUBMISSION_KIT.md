@@ -8,7 +8,9 @@
 - Genre: Roguelike deckbuilder, strategy, board game
 - Platform: Windows, macOS, and Linux via Steam
 - Playtest: Completed August 7–16, 2026; no key required
-- Public demo: September 15, 2026 (planned; not live as of September 8)
+- Public demo: Live since September 15, 2026
+- Steam Next Fest: Registered for October 19–26, 2026
+- Upcoming update: v1.02 is in development with further balance, polish, and quality-of-life updates
 - Full release target: November 4, 2026 (tentative)
 - Price target: $12.99 USD; 10% launch sale planned
 - Steam: https://store.steampowered.com/app/4811700/Mancalero/?utm_source=press_kit&utm_medium=owned_web&utm_campaign=demo_launch_sep_2026&utm_content=steam_cta
@@ -69,7 +71,7 @@ Mancalero turns Mancala into a roguelike combo engine: build a pouch of special 
 
 ## Showcase submission paragraph
 
-Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a modern roguelike deckbuilder. It combines a timeless board-game foundation with special marble synergies, evolving boards, rule-changing bosses, and tactile paper-pixel presentation. The public Playtest ran August 7–16, the public demo is planned for September 15, and the full release is tentatively targeted for November 2026.
+Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a modern roguelike deckbuilder. It combines a timeless board-game foundation with special marble synergies, evolving boards, rule-changing bosses, and tactile paper-pixel presentation. The public Playtest ran August 7–16, the free public demo is live now, Mancalero is registered for October's Steam Next Fest, and the full release is tentatively targeted for November 4, 2026. A substantial v1.02 update is in development with further balance, polish, and quality-of-life updates.
 
 
 ## Showcase applications
@@ -84,5 +86,7 @@ Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a mo
 - Official key art: `assets/branding/mancalero-key-art-1920x1080.png`
 - Complete Steam capsule suite: `assets/branding/steam/` (native-size PNG exports: 1232×706 main, 920×430 header plus Indigo/Cyan-outline alternate, 600×900 library, 1280×720 library logo, 462×174 small, 748×896 vertical, 1414×464 package header, and 3840×1240 library hero)
 - Nine current Steam screenshots: `assets/screenshots/steam/`
+- October 2026 Steam Next Fest demo-release trailer: `assets/trailers/mancalero-demo-release-trailer-october-2026-next-fest.mp4` (60.2 seconds, 1920×1080, 60 fps)
+- Trailer poster: `assets/trailers/mancalero-demo-release-trailer-poster.jpg`
 - Selected marble reference gallery: `assets/marbles/` (the demo includes a subset)
 - Updated public media hub: https://cerlus.github.io/mancalero-press-media-hub/

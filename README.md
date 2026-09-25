@@ -33,7 +33,7 @@ Then add `press.archius.dev` under **Settings > Pages > Custom domain**. GitHub 
 - `assets/submissions/indie-live-expo-2026/`: direct-download mirror and specification note for the INDIE Live Expo package
 - `Mancalero_Applications_Record.md`: confirmed showcase applications/registrations and clearly separated preparation status
 
-The supplied capsule art, logos, screenshots, GIFs, gameplay clips, official YouTube trailer, selected marble icons, press-kit ZIP, and creator B-roll ZIP are included. The Media section includes all nine supplied Steam capsule exports at native dimensions and offers each original PNG as a direct download. The browser round uses native HTML, CSS, JavaScript, and Web Audio so the site remains a no-build GitHub Pages deployment. The public press contact is `needle-blares.0m@icloud.com`, and the social hub is https://linktr.ee/archiusdev.
+The supplied capsule art, logos, screenshots, GIFs, gameplay clips, the October 2026 Steam Next Fest demo-release trailer, selected marble icons, press-kit ZIP, and creator B-roll ZIP are included. The public demo is live, Mancalero is registered for October's Steam Next Fest, and a substantial v1.02 update is in development. The Media section includes all nine supplied Steam capsule exports at native dimensions and offers each original PNG as a direct download. The browser round uses native HTML, CSS, JavaScript, and Web Audio so the site remains a no-build GitHub Pages deployment. The public press contact is `needle-blares.0m@icloud.com`, and the social hub is https://linktr.ee/archiusdev.
 
 ## Relationship to the Command Center
 
