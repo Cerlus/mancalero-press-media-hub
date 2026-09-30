@@ -86,6 +86,8 @@ Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a mo
 - Official key art: `assets/branding/mancalero-key-art-1920x1080.png`
 - Complete Steam capsule suite: `assets/branding/steam/` (native-size PNG exports: 1232×706 main, 920×430 header plus Indigo/Cyan-outline alternate, 600×900 library, 1280×720 library logo, 462×174 small, 748×896 vertical, 1414×464 package header, and 3840×1240 library hero)
 - Nine current Steam screenshots: `assets/screenshots/steam/`
+- v1.02 Next Fest demo-reveal trailer: `assets/trailers/mancalero-v1-02-nextfest-demo-trailer-october-2026.mp4` (63.6 seconds, 1920×1080, 60 fps; planned release October 8, 2026)
+- v1.02 trailer poster: `assets/trailers/mancalero-v1-02-nextfest-demo-trailer-poster.jpg`
 - October 2026 Steam Next Fest demo-release trailer: `assets/trailers/mancalero-demo-release-trailer-october-2026-next-fest.mp4` (60.2 seconds, 1920×1080, 60 fps)
 - Trailer poster: `assets/trailers/mancalero-demo-release-trailer-poster.jpg`
 - Vertical social trailer: `assets/trailers/mancalero-demo-release-shorts-october-2026-next-fest.mp4` (full-resolution direct asset; 60.0 seconds, 1080×1920, 60 fps; YouTube Shorts / Instagram Reels / TikTok)

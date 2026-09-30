@@ -1,6 +1,6 @@
 MANCALERO / UPDATED PRESS KIT — SEPTEMBER 2026
 
-The live press hub includes the official 1920×1080 key art, the complete Steam capsule suite at its native dimensions, nine current Steam screenshots, and a selected marble reference gallery. Each image is linked individually from the Media section for direct opening or download. The marble gallery is a broader development reference set; the public demo includes a subset.
+The live press hub includes the official 1920×1080 key art, the complete Steam capsule suite at its native dimensions, the current Steam screenshot reference gallery, three updated downloadable store captures, five updated gameplay GIFs, and a selected marble reference gallery. Each image is linked individually from the Media section for direct opening or download. The marble gallery is a broader development reference set; the public demo includes a subset.
 
 STEAM CAPSULE SUITE
 
@@ -24,6 +24,8 @@ Tentative full release: November 4, 2026
 
 TRAILER
 
+- v1.02 Next Fest demo-reveal trailer: assets/trailers/mancalero-v1-02-nextfest-demo-trailer-october-2026.mp4 (63.6 seconds, 1920 × 1080, 60 fps; planned release October 8, 2026)
+- v1.02 trailer poster: assets/trailers/mancalero-v1-02-nextfest-demo-trailer-poster.jpg
 - October 2026 Steam Next Fest demo-release trailer: assets/trailers/mancalero-demo-release-trailer-october-2026-next-fest.mp4
 - Trailer poster: assets/trailers/mancalero-demo-release-trailer-poster.jpg
 - Vertical social trailer: assets/trailers/mancalero-demo-release-shorts-october-2026-next-fest.mp4 (60.0 seconds, 1080 × 1920, 60 fps)
