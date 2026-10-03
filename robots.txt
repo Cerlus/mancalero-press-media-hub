@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://cerlus.github.io/mancalero-press-media-hub/sitemap.xml
+Sitemap: https://cerlus.github.io/mancalero-press-media-hub/video-sitemap.xml

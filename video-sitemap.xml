@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://cerlus.github.io/mancalero-press-media-hub/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://cerlus.github.io/mancalero-press-media-hub/assets/trailers/mancalero-v1-02-nextfest-demo-trailer-poster.jpg</video:thumbnail_loc>
+      <video:title>Mancalero v1.02 Next Fest Demo Trailer</video:title>
+      <video:description>Reveal trailer for Mancalero's v1.02 demo update planned for October 8, 2026, ahead of Steam Next Fest.</video:description>
+      <video:content_loc>https://cerlus.github.io/mancalero-press-media-hub/assets/trailers/mancalero-v1-02-nextfest-demo-trailer-october-2026.mp4</video:content_loc>
+      <video:duration>64</video:duration>
+      <video:publication_date>2026-09-30T09:58:26-04:00</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://cerlus.github.io/mancalero-press-media-hub/assets/trailers/mancalero-demo-release-trailer-poster.jpg</video:thumbnail_loc>
+      <video:title>Mancalero Demo Release Trailer — October 2026 Steam Next Fest</video:title>
+      <video:description>Mancalero's demo release trailer for October 2026 Steam Next Fest, featuring special marbles, evolving boards, and rule-changing bosses.</video:description>
+      <video:content_loc>https://cerlus.github.io/mancalero-press-media-hub/assets/trailers/mancalero-demo-release-trailer-october-2026-next-fest.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-09-25T13:48:26-04:00</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://cerlus.github.io/mancalero-press-media-hub/assets/trailers/mancalero-demo-release-shorts-poster.jpg</video:thumbnail_loc>
+      <video:title>Mancalero Demo Release Trailer — Short Cut</video:title>
+      <video:description>Vertical 9:16 social trailer for Mancalero's free demo and October 2026 Steam Next Fest.</video:description>
+      <video:content_loc>https://cerlus.github.io/mancalero-press-media-hub/assets/trailers/mancalero-demo-release-shorts-october-2026-next-fest.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-09-25T16:04:20-04:00</video:publication_date>
+    </video:video>
+  </url>
+</urlset>
