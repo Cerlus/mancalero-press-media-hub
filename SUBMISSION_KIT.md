@@ -59,7 +59,7 @@ The core distinction is the combination of tactile Mancala sowing, marble build-
 
 ### What is the release plan?
 
-The public Steam Playtest ran August 7–16, 2026. The free public demo is planned for September 15, 2026 and is not live yet as of September 8; the full game is currently planned for release on November 4, 2026.
+The public Steam Playtest ran August 7–16, 2026. The free public demo has been live since September 15, 2026. Mancalero is registered for Steam Next Fest, October 19–26, 2026. The full release is tentatively targeted for November 4, 2026.
 
 ### Who is it for?
 
