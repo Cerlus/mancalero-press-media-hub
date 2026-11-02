@@ -9,11 +9,11 @@
 - Platform: Windows, macOS, and Linux via Steam
 - Playtest: Completed August 7–16, 2026; no key required
 - Public demo: Live since September 15, 2026
-- Steam Next Fest: Registered for October 19–26, 2026
-- Upcoming update: v1.02 is in development with further balance, polish, and quality-of-life updates
-- Full release target: November 4, 2026 (tentative)
+- Steam Next Fest: October 19–26, 2026, with the v1.02 demo update
+- Full release: November 4, 2026 on Steam
+- Launch trailer: https://cerlus.github.io/mancalero-press-media-hub/assets/trailers/mancalero-launch-trailer-november-2026.mp4
 - Price target: $12.99 USD; 10% launch sale planned
-- Steam: https://store.steampowered.com/app/4811700/Mancalero/?utm_source=press_kit&utm_medium=owned_web&utm_campaign=demo_launch_sep_2026&utm_content=steam_cta
+- Steam: https://store.steampowered.com/app/4811700/Mancalero/?utm_source=press_kit&utm_medium=owned_web&utm_campaign=launch_nov_2026&utm_content=steam_cta
 - OST: https://youtu.be/9H9Xf3YLuuQ?si=cAwMLArpoiDHiaRB
 - Discord: https://discord.gg/aWSUUYeFTD
 - Bilibili: https://space.bilibili.com/3707052637554989
@@ -59,7 +59,7 @@ The core distinction is the combination of tactile Mancala sowing, marble build-
 
 ### What is the release plan?
 
-The public Steam Playtest ran August 7–16, 2026. The free public demo is planned for September 15, 2026 and is not live yet as of September 8; the full game is currently planned for release on November 4, 2026.
+The public Steam Playtest ran August 7–16, 2026. The free demo has been live on Steam and itch.io since September 15, 2026, and got the v1.02 update ahead of Steam Next Fest in October. The full game launches on Steam on November 4, 2026.
 
 ### Who is it for?
 

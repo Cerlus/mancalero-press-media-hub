@@ -30,8 +30,8 @@ jobs:
       - name: Package press downloads
         run: |
           rm -f assets/press-kit/mancalero-press-kit.zip assets/downloads/mancalero-broll.zip
-          zip -r -q assets/press-kit/mancalero-press-kit.zip assets/branding assets/logos assets/screenshots assets/gifs assets/trailers assets/press-kit/README.txt SUBMISSION_KIT.md
-          zip -r -q assets/downloads/mancalero-broll.zip assets/trailers
+          zip -r -q assets/press-kit/mancalero-press-kit.zip assets/branding assets/logos assets/screenshots/launch assets/trailers/mancalero-launch-trailer-* assets/press-kit/README.txt SUBMISSION_KIT.md
+          zip -r -q assets/downloads/mancalero-broll.zip assets/trailers/mancalero-launch-trailer-november-2026.mp4 assets/clips/*.mp4 assets/loops/*.mp4
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3

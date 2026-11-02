@@ -26,12 +26,17 @@ Then add `press.archius.dev` under **Settings > Pages > Custom domain**. GitHub 
 - `assets/gifs/`: short gameplay GIFs
 - `assets/logos/`: logo files and transparent marks
 - `assets/trailers/`: local trailer and B-roll files
+- `assets/social/`: vertical social clips (with poster JPGs)
+- `assets/clips/`: 16:9 marble showcase clips
+- `assets/loops/`: short gameplay loops (MP4; GIF copies in `assets/gifs/`)
 - `assets/marbles/`: selected marble reference icons for the public gallery
 - `assets/press-kit/`: downloadable ZIP and fact sheet
 - `assets/downloads/`: creator-friendly B-roll ZIP
 - `assets/branding/`: key art, the complete native-size Steam capsule suite, and branding guide
 - `assets/submissions/indie-live-expo-2026/`: direct-download mirror and specification note for the INDIE Live Expo package
 - `Mancalero_Applications_Record.md`: confirmed showcase applications/registrations and clearly separated preparation status
+
+**Launch update (2026-11-02):** the Media section now leads with the launch trailer (`assets/trailers/mancalero-launch-trailer-november-2026.mp4`), then the newest vertical social clips (`assets/social/`), the marble showcase clips (`assets/clips/`), the eight Steam-page gameplay loops (`assets/loops/` MP4 + `assets/gifs/` GIF), the ten launch-build screenshots (`assets/screenshots/launch/`) and the OUT NOW capsule art (`assets/branding/out-now/`). Earlier demo trailers, screenshots and GIFs keep their old paths so existing links still work. The deploy workflow zips only the current set (press kit: art, logos, launch screenshots, launch trailer; B-roll: launch trailer, showcase clips, loops) to keep the published site under GitHub Pages' 1 GB limit.
 
 The supplied capsule art, logos, screenshots, GIFs, gameplay clips, the October 2026 Steam Next Fest demo-release trailers in horizontal and vertical social formats, the v1.02 Next Fest demo-reveal trailer, selected marble icons, press-kit ZIP, and creator B-roll ZIP are included. The public demo is live, Mancalero is registered for October's Steam Next Fest, and a substantial v1.02 update is in development. The Media section includes all eight current Steam capsule exports at native dimensions, plus the official 1920×1080 key art without an added border outline, and offers each original PNG as a direct download. The full-resolution 1080×1920 vertical cut is available directly from the Media section; an optimized 720×1280 copy is included in the downloadable press-kit ZIP. The browser round uses native HTML, CSS, JavaScript, and Web Audio so the site remains a no-build GitHub Pages deployment. The public press contact is `needle-blares.0m@icloud.com`, and the social hub is https://linktr.ee/archiusdev.
 
