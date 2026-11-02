@@ -33,7 +33,6 @@ Then add `press.archius.dev` under **Settings > Pages > Custom domain**. GitHub 
 - `assets/press-kit/`: downloadable ZIP and fact sheet
 - `assets/downloads/`: creator-friendly B-roll ZIP
 - `assets/branding/`: key art, the complete native-size Steam capsule suite, and branding guide
-- `assets/submissions/indie-live-expo-2026/`: direct-download mirror and specification note for the INDIE Live Expo package
 - `Mancalero_Applications_Record.md`: confirmed showcase applications/registrations and clearly separated preparation status
 
 **Launch update (2026-11-02):** the Media section now leads with the launch trailer (`assets/trailers/mancalero-launch-trailer-november-2026.mp4`), then the newest vertical social clips (`assets/social/`), the marble showcase clips (`assets/clips/`), the eight Steam-page gameplay loops (`assets/loops/` MP4 + `assets/gifs/` GIF), the ten launch-build screenshots (`assets/screenshots/launch/`) and the OUT NOW capsule art (`assets/branding/out-now/`). The demo-era trailers, the old GIFs and the old screenshots were removed on 2026-11-02 (Steam Next Fest is done). The deploy workflow zips only the current set (press kit: art, logos, launch screenshots, launch trailer; B-roll: launch trailer, showcase clips, loops) to keep the published site under GitHub Pages' 1 GB limit.

@@ -12,7 +12,7 @@ This page is the source note for the public press-kit banner. “Applied” mean
 | IndieX 2026 | Applied | Submitted by the developer; key-allocation details are kept private. |
 | Steam Next Fest — October 2026 | Took part | Mancalero's demo took part in the October 19–26, 2026 event with the v1.02 update. |
 | Best Indie Games | Applied | Submitted and verified by the developer through the official developer form. |
-| INDIE Live Expo 2026.12.1 / INDIE Waves | Applied | Submitted September 3, 2026 through the official entry form; public media mirror supplied. |
+| INDIE Live Expo 2026.12.1 / INDIE Waves | In the Steam sale | Not selected for the INDIE Waves showcase; Mancalero is in the INDIE Live Expo sale on Steam from December 1, 2026. Submitted September 3, 2026. |
 | Support the Indies (Helix / DFF) | Applied | Submitted September 3, 2026 through the official game-submission form; no key was required. |
 | Game*Spark | Applied | Submitted September 7, 2026 through the official IID release-submission form; the form confirmed that the inquiry was sent. |
 
