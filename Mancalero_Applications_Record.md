@@ -10,7 +10,7 @@ This page is the source note for the public press-kit banner. “Applied” mean
 |---|---|---|
 | BGM Game Expo Winter 2026 | Applied | Submitted by the developer using the ArchiusDev YouTube-associated account email. |
 | IndieX 2026 | Applied | Submitted by the developer; key-allocation details are kept private. |
-| Steam Next Fest — October 2026 | Registered | Registration and the September 15, 2026 demo date were confirmed in Steamworks. |
+| Steam Next Fest — October 2026 | Took part | Mancalero's demo took part in the October 19–26, 2026 event with the v1.02 update. |
 | Best Indie Games | Applied | Submitted and verified by the developer through the official developer form. |
 | INDIE Live Expo 2026.12.1 / INDIE Waves | Applied | Submitted September 3, 2026 through the official entry form; public media mirror supplied. |
 | Support the Indies (Helix / DFF) | Applied | Submitted September 3, 2026 through the official game-submission form; no key was required. |

@@ -136,3 +136,52 @@
 .earlier-list small{color:var(--coral);font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
 @media(max-width:800px){.social-grid,.loop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.social-grid-wide,.earlier-list{grid-template-columns:1fr}.loop-video{height:auto;aspect-ratio:16/9}.media-meta{flex-wrap:wrap}}
 @media(max-width:480px){.social-grid{grid-template-columns:1fr 1fr;gap:10px}.social-card figcaption span{display:none}}
+
+/* Pixel type (2026-11-02): the game's fonts, self-hosted. Press Start 2P for headings, labels, buttons and
+   numbers; VT323 for running text, scaled up to Arial's x-height with font-size-adjust so every existing
+   body size stays readable. Press Start 2P is a full-em-wide face, so its sizes are set here explicitly. */
+@font-face{font-family:'Press Start 2P';src:url(assets/fonts/press-start-2p.woff2) format('woff2');font-display:swap}
+@font-face{font-family:'VT323';src:url(assets/fonts/vt323.woff2) format('woff2');font-display:swap}
+:root{--pixel:'Press Start 2P',ui-monospace,monospace;--term:'VT323',ui-monospace,monospace}
+body{font-family:var(--term);font-size-adjust:.52;letter-spacing:.2px}
+h1,h2,h3,.wordmark,.site-header nav,.eyebrow,.section-index,.label,.button,.status-line,.signal-strip span,.signal-strip strong,.pitch-card>span,
+.fact-sheet dt,.fact-sheet dd,.feature-mark,.timeline time,.download-row span,.download-row b,.contact-grid strong,.contact-links a,.site-footer,.art-caption,
+.media-meta strong,.media-meta a,.media-gallery-count,.media-gif-meta strong,.media-gif-meta small,.steam-capsule-meta strong,.steam-capsule-meta small,
+.social-card figcaption strong,.social-card figcaption small,.social-card figcaption a,.loop-card a,.media-meta-links a,.outnow-link,.steam-screenshot-hint,
+.showcase-status,.showcase-item strong,.showcase-banner-footer,.ost-card span,.itch-card-title,.itch-card-action,.mini-demo-note,.marble-carousel-status strong,
+.marble-carousel-status span,.marble-thumb span,.marble-carousel-control,.submission-callout strong,.submission-card-body h3,.submission-card-body .label,
+.submission-notes h3,.submission-link,.media-trailer-label{font-family:var(--pixel);font-size-adjust:none;letter-spacing:.5px;font-weight:400}
+h1{font-size:clamp(26px,3.7vw,46px);line-height:1.3;letter-spacing:0}
+h2,.play-lab-copy h2{font-size:clamp(18px,2.3vw,28px);line-height:1.4;letter-spacing:0}
+.showcase-banner-heading h2{font-size:clamp(15px,1.8vw,20px)}
+h3,.submission-card-body h3,.submission-notes h3{font-size:14px;line-height:1.5}
+.wordmark{font-size:11px}.site-header nav{font-size:9px;gap:18px}
+.eyebrow,.section-index,.label,.status-line,.signal-strip span,.pitch-card>span,.fact-sheet dt,.feature-mark,.timeline time,.site-footer,.art-caption,
+.media-meta a,.media-gallery-count,.media-gif-meta small,.steam-capsule-meta small,.social-card figcaption small,.social-card figcaption a,.loop-card a,
+.media-meta-links a,.outnow-link,.steam-screenshot-hint,.showcase-status,.showcase-banner-footer,.mini-demo-note,.marble-carousel-status span,.marble-thumb span,
+.submission-card-body .label,.submission-link,.media-trailer-label,.itch-card-action{font-size:8px!important;line-height:1.7}
+.status-line{line-height:2.1}
+.button{font-size:10px;letter-spacing:.5px}
+.signal-strip strong,.fact-sheet dd{font-size:12px;line-height:1.6}
+.media-meta strong,.media-gif-meta strong,.steam-capsule-meta strong,.social-card figcaption strong,.marble-carousel-status strong,.ost-card span,.itch-card-title{font-size:11px;line-height:1.5}
+.showcase-item strong{font-size:13px}
+.download-row span{font-size:14px;line-height:1.5}.download-row b{font-size:16px}
+.contact-links a{font-size:10px}
+.contact-grid strong{font-size:clamp(14px,1.7vw,20px);line-height:1.4;overflow-wrap:anywhere}
+.lede{font-size:18px}.pitch-card p,.quote-band p{font-family:var(--term);font-size-adjust:.52}
+/* Contact: the ArchiusDev M beside the name */
+.contact-identity{display:flex;align-items:center;gap:20px;margin-bottom:26px}
+.contact-mark{width:120px;height:120px;flex:none;object-fit:contain;filter:drop-shadow(4px 4px 0 rgba(0,0,0,.45));animation:markFloat 3.2s ease-in-out infinite}
+.contact-identity strong{margin-bottom:6px!important}
+.contact-identity small{color:#a9b1c3;font-size:17px}
+.contact-grid{box-shadow:8px 8px 0 var(--coral);border:3px solid var(--ink)}
+.contact-links a{display:flex;align-items:center;justify-content:space-between;border:2px solid rgba(255,255,255,.22);padding:10px 12px;background:rgba(255,255,255,.04);transition:background .15s ease,transform .15s ease}
+.contact-links a:hover{background:rgba(255,255,255,.12);transform:translate(-1px,-1px)}
+@keyframes markFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media(prefers-reduced-motion:reduce){.contact-mark{animation:none}}
+@media(max-width:800px){.site-header nav{gap:12px}.contact-mark{width:84px;height:84px}.contact-identity{gap:14px}}
+.wordmark{white-space:nowrap;flex:none}.site-header nav{gap:16px;flex-wrap:wrap;justify-content:flex-end}.site-header nav a{white-space:nowrap}
+.contact-grid strong a{font-size:clamp(11px,1.15vw,14px);white-space:nowrap}
+@media(max-width:800px){.site-header nav{justify-content:flex-start}.contact-grid strong a{white-space:normal;overflow-wrap:anywhere}}
+.site-header nav{font-size:8px;gap:13px}
+@media(max-width:800px){.site-header nav{font-size:9px}.contact-grid strong a{font-size:10px;white-space:nowrap}}

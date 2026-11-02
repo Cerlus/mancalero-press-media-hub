@@ -9,7 +9,7 @@
 - Platform: Windows, macOS, and Linux via Steam
 - Playtest: Completed August 7–16, 2026; no key required
 - Public demo: Live since September 15, 2026
-- Steam Next Fest: October 19–26, 2026, with the v1.02 demo update
+- Steam Next Fest: took part, October 19–26, 2026, with the v1.02 demo
 - Full release: November 4, 2026 on Steam
 - Launch trailer: https://cerlus.github.io/mancalero-press-media-hub/assets/trailers/mancalero-launch-trailer-november-2026.mp4
 - Price target: $12.99 USD; 10% launch sale planned
@@ -85,13 +85,11 @@ Mancalero is a Ghanaian-Canadian solo developer's reimagining of Mancala as a mo
 
 - Official key art: `assets/branding/mancalero-key-art-1920x1080.png`
 - Complete Steam capsule suite: `assets/branding/steam/` (native-size PNG exports: 1232×706 main, 920×430 standard header, 600×900 library, 1280×720 library logo, 462×174 small, 748×896 vertical, 1414×464 package header, and 3840×1240 library hero). The official 1920×1080 key art is available at `assets/branding/mancalero-key-art-1920x1080.png` without an added border outline.
-- Nine current Steam screenshots: `assets/screenshots/steam/`
-- v1.02 Next Fest demo-reveal trailer: `assets/trailers/mancalero-v1-02-nextfest-demo-trailer-october-2026.mp4` (63.6 seconds, 1920×1080, 60 fps; planned release October 8, 2026)
-- v1.02 trailer poster: `assets/trailers/mancalero-v1-02-nextfest-demo-trailer-poster.jpg`
-- October 2026 Steam Next Fest demo-release trailer: `assets/trailers/mancalero-demo-release-trailer-october-2026-next-fest.mp4` (60.2 seconds, 1920×1080, 60 fps)
-- Trailer poster: `assets/trailers/mancalero-demo-release-trailer-poster.jpg`
-- Vertical social trailer: `assets/trailers/mancalero-demo-release-shorts-october-2026-next-fest.mp4` (full-resolution direct asset; 60.0 seconds, 1080×1920, 60 fps; YouTube Shorts / Instagram Reels / TikTok)
-- Optimized vertical copy for the downloadable ZIP: `assets/trailers/mancalero-demo-release-shorts-720x1280-press.mp4` (60.0 seconds, 720×1280, 30 fps)
-- Vertical trailer poster: `assets/trailers/mancalero-demo-release-shorts-poster.jpg`
+- Ten launch-build screenshots: `assets/screenshots/launch/` (1920×1080 PNG, the current Steam set in story order)
+- Launch trailer: `assets/trailers/mancalero-launch-trailer-november-2026.mp4` (1:25, 1920×1080, 60 fps), cover art `assets/trailers/mancalero-launch-trailer-cover-red-1920.jpg`
+- Twelve vertical social clips: `assets/social/` (1080×1920)
+- Five marble showcase clips: `assets/clips/` (1920×1080)
+- Eight gameplay loops: `assets/loops/` (MP4) and `assets/gifs/` (GIF)
+- OUT NOW capsule art, red and purple: `assets/branding/out-now/`
 - Selected marble reference gallery: `assets/marbles/` (the demo includes a subset)
 - Updated public media hub: https://cerlus.github.io/mancalero-press-media-hub/
