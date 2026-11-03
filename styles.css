@@ -185,3 +185,5 @@ h3,.submission-card-body h3,.submission-notes h3{font-size:14px;line-height:1.5}
 @media(max-width:800px){.site-header nav{justify-content:flex-start}.contact-grid strong a{white-space:normal;overflow-wrap:anywhere}}
 .site-header nav{font-size:8px;gap:13px}
 @media(max-width:800px){.site-header nav{font-size:9px}.contact-grid strong a{font-size:10px;white-space:nowrap}}
+
+.itch-demo-embed{flex-direction:column;gap:14px}
