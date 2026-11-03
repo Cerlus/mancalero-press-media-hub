@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Mancalero — Free Demo</title>
+<link rel="icon" href="../assets/logos/mancalero-m.png">
+<style>
+  html, body { margin: 0; height: 100%; background: #1e0e04; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; right: 0; bottom: 30px; overflow: hidden; background: #1e0e04; }
+  #game { position: absolute; left: 0; top: 0; border: 0; display: block; background: #f5e6c8; transform-origin: 0 0; }
+  #bar { position: absolute; left: 0; right: 0; bottom: 0; height: 30px; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 14px; box-sizing: border-box; background: #1e0e04; color: #c9a87c; font: 11px/1 ui-monospace, Menlo, Consolas, monospace;
+    letter-spacing: 0.12em; text-transform: uppercase; }
+  #bar a, #bar button { color: #fdf4e0; text-decoration: none; background: none; border: 0; font: inherit; letter-spacing: inherit;
+    text-transform: inherit; cursor: pointer; padding: 6px 0; margin-left: 18px; }
+  #bar a:hover, #bar button:hover { color: #f5c020; }
+</style>
+</head>
+<body>
+<div id="stage"><iframe id="game" src="game/index.html" title="Mancalero demo" allow="autoplay; fullscreen; gamepad" allowfullscreen></iframe></div>
+<div id="bar">
+  <span>Mancalero / Free demo</span>
+  <span><a href="https://store.steampowered.com/app/4811700/Mancalero/" target="_blank" rel="noopener">Get it on Steam ↗</a><button id="fs" type="button">Fullscreen ↗</button></span>
+</div>
+<script>
+  // The game lays itself out from its window: under 560px tall it switches to the phone layout. A window at least
+  // DESKTOP_W x DESKTOP_H gets the game at its real size; a smaller one (X's inline player, a phone) gets the desktop
+  // game at DESKTOP_W x DESKTOP_H, scaled down to fit and centred, so it is always the desktop version.
+  var DESKTOP_W = 1280, DESKTOP_H = 720;
+  var stage = document.getElementById('stage'), game = document.getElementById('game');
+  function fit() {
+    var w = stage.clientWidth, h = stage.clientHeight;
+    if (w >= DESKTOP_W && h >= DESKTOP_H) {
+      game.style.width = w + 'px'; game.style.height = h + 'px'; game.style.transform = 'none';
+      return;
+    }
+    var s = Math.min(w / DESKTOP_W, h / DESKTOP_H);
+    game.style.width = DESKTOP_W + 'px'; game.style.height = DESKTOP_H + 'px';
+    game.style.transform = 'translate(' + Math.round((w - DESKTOP_W * s) / 2) + 'px,' + Math.round((h - DESKTOP_H * s) / 2) + 'px) scale(' + s + ')';
+  }
+  window.addEventListener('resize', fit);
+  fit();
+  document.getElementById('fs').addEventListener('click', function () {
+    var el = document.documentElement;
+    if (document.fullscreenElement) document.exitFullscreen();
+    else if (el.requestFullscreen) el.requestFullscreen().catch(function () { window.open(location.href, '_blank'); });
+    else window.open(location.href, '_blank');
+  });
+  // Clicks on the page outside the game hand keyboard focus back to it.
+  document.addEventListener('mousedown', function (e) { if (e.target === stage) game.focus(); });
+</script>
+</body>
+</html>
